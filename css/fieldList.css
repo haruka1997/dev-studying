@@ -1,5 +1,5 @@
 .fieldList-menu {
-    width: 500px;
+    width: 90%;
     padding: 0;
     margin: 30px;
 }
@@ -8,7 +8,6 @@
     border-bottom: 1px solid #fff;
     cursor: pointer;
 }
-
 .fieldList-menu li a {
     display: block;
     position: relative;
@@ -18,7 +17,6 @@
     font-size: 14px;
     line-height: 40px;
 }
-
 .fieldList-menu li a:before {
     display: block;
     content: "";
@@ -43,7 +41,6 @@
     transition: 0.2s linear;
     color: #494949;
 }
-
 .collapsed:hover{
     color:#494949;
 }

@@ -41,7 +41,7 @@
           </div>
         </header>
         <div class="mdl-layout__drawer">
-          <span class="mdl-layout-title">メニュー</span>
+          <span class="mdl-layout-title">科目</span>
           <nav class="mdl-navigation">
             <a class="mdl-navigation__link" ng-click="indexCtrl.method.clickNav(1);" ng-href="./#/">コース</a>
             <a class="mdl-navigation__link" ng-click="indexCtrl.method.clickNav(2);" ng-href="./#/myPage">マイページ</a>
@@ -52,22 +52,18 @@
             <!--メニュー-->
             <div class="menu" ng-if="!indexCtrl.value.flag.isCourse">
                 <h1>メニュー</h1>
-                <ul>
-                    <li><a ng-click="indexCtrl.method.clickMenu('システムアーキテクト');">システムアーキテクト</a></li>
-                    <li><a ng-click="indexCtrl.method.clickMenu('情報システム基礎論');">情報システム基礎論</a></li>
-                    <li><a ng-click="indexCtrl.method.clickMenu('ネットワーク論');">ネットワーク論</a></li>
-                    <li><a ng-click="indexCtrl.method.clickMenu('モデリング実践論');">モデリング実践論</a></li>
-                    <li><a ng-click="indexCtrl.method.clickMenu('ソフトウェア設計学');">ソフトウェア設計学</a></li>
-                    <li><a ng-click="indexCtrl.method.clickMenu('ファイルとデータベース');">ファイルとデータベース</a></li>
-                    <li><a ng-click="indexCtrl.method.clickMenu('数論と代数');">数論と代数</a></li>
-                    <li><a ng-click="indexCtrl.method.clickMenu('アルゴリズム論');">アルゴリズム論</a></li>
-                    <li><a ng-click="indexCtrl.method.clickMenu('情報システム構築学Ⅰ');">情報システム構築学Ⅰ</a></li>
-                </ul>
+                <div class="list-group pmd-z-depth pmd-list pmd-card-list">
+                    <a class="list-group-item" ng-click="indexCtrl.method.clickMenu('システムアーキテクト');">システムアーキテクト</a>
+                    <a class="list-group-item" ng-click="indexCtrl.method.clickMenu('情報システム基礎論');">情報システム基礎論</a>
+                    <a class="list-group-item" ng-click="indexCtrl.method.clickMenu('ネットワーク論');">ネットワーク論</a>
+                    <a class="list-group-item" ng-click="indexCtrl.method.clickMenu('モデリング実践論');">モデリング実践論</a>
+                    <a class="list-group-item" ng-click="indexCtrl.method.clickMenu('ソフトウェア設計学');">ソフトウェア設計学</a>
+                </div>
             </div>
         
             <!--タイトル(パンくずリスト)-->
             <div class="mainContents" ng-cloak ng-if="!indexCtrl.value.flag.isCourse">
-                <article class = "mainSection">
+                <article class="mainSection">
                     <div class="mainSectionTitle">
                         <a ng-if="indexCtrl.value.titleString.length==0">コースについて</a>
                         <a ng-if="indexCtrl.value.titleString.length>0" ng-click="indexCtrl.method.clickUrl(1);">{{indexCtrl.value.titleString[0]}}</a>

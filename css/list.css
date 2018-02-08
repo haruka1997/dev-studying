@@ -31,7 +31,9 @@
     font-size:18px;
     font-weight:bold;
 }
-
 .list{
     margin:20px;
+}
+.list-order-mark{
+    cursor: pointer;
 }

@@ -1,16 +1,10 @@
 .main-menuExplain .main-menuImg{
-    /* padding: 0.5em 1em; */
-    /* margin: 5px; */
     height: 130px;
 }
 .main-menuExplain{
     padding: 0.5em 1em;
     margin: 1em 0;
     color: #494949;
-    /* border-left: 10px solid #4790BB;
-    border-top: 1px solid #4790BB;
-    border-right: 1px solid #4790BB;
-    border-bottom: 1px solid #4790BB; */
     width: 95%;
     margin-left: 30px;
 }

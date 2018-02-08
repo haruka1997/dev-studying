@@ -14,14 +14,12 @@
     			<thead>
     				<tr>
     					<th width="30%">タイトル</th>
-    					<th width="10%">作成日 <label ng-click="explainListCtrl.method.clickOrder('作成日');">{{explainListCtrl.value.orderMark.insertTime}}</label></th>
-                        <th width="10%">難易度 <label ng-click="explainListCtrl.method.clickOrder('難易度');">{{explainListCtrl.value.orderMark.difficult}}</label></th>
-                        <th width="10%">理解度 <label ng-click="explainListCtrl.method.clickOrder('理解度');">{{explainListCtrl.value.orderMark.understand}}</label></th>
-    					<!-- <th width="20%">メニュー</th>
-    					<th width="30%">分野</th> -->
+    					<th width="10%">作成日 <label ng-click="explainListCtrl.method.clickOrder('作成日');" class="list-order-mark">{{explainListCtrl.value.orderMark.insertTime}}</label></th>
+                        <th width="10%">難易度 <label ng-click="explainListCtrl.method.clickOrder('難易度');" class="list-order-mark">{{explainListCtrl.value.orderMark.difficult}}</label></th>
+                        <th width="10%">理解度 <label ng-click="explainListCtrl.method.clickOrder('理解度');" class="list-order-mark">{{explainListCtrl.value.orderMark.understand}}</label></th>
     				</tr>
     			</thead>
-    			<tbody style="font-size:.9rem;">
+    			<tbody>
     				<tr ng-repeat="explain in explainListCtrl.value.showExplainInPage[explainListCtrl.value.currentPage-1]" data-target="#explain-dialog" data-toggle="modal"ng-click="explainListCtrl.method.clickExplain(explain);">
     					<td data-title="タイトル" ng-bind="explain.title"></td>
     					<td style="text-align:center"data-title="作成日" ng-bind="explain.insertTime | date: 'yyyy/MM/dd'"></td>
@@ -31,8 +29,6 @@
                         <td style="text-align:center" data-title="理解度">
                             <img ng-repeat="understand in explain.showEvalute.understand track by $index"ng-src='{{understand}}' width="15%"/>
                         </td>
-    					<!-- <td data-title="メニュー" ng-bind="explain.menu"></td>
-    					<td data-title="分野" ng-bind="explain.field"></td> -->
     				</tr>
     			</tbody>
     		</table>
@@ -91,7 +87,9 @@
 .pagination a {
     cursor: pointer;
 }
-
+#table-propeller tbody{
+    font-size: 0.9em;
+}
 #table-propeller tbody tr{
     cursor: pointer;
 }
