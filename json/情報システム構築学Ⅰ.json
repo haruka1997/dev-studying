@@ -1,0 +1,74 @@
+{
+	"情報システムとは":{
+        "flag": true,
+        "items":[
+            {"name":"情報システムの定義",
+             "flag":true
+             },
+             {"name":"情報システムの役割",
+              "flag":true
+             },
+             {"name":"情報システムの歴史",
+              "flag":true
+             }
+     	]
+    },
+    "情報システムの処理形態":{
+        "flag": true,
+        "items":[
+            {"name":"処理形態の変遷",
+             "flag":true
+            },
+            {"name":"クライアント/サーバシステム",
+             "flag":true
+            },
+            {"name":"Web化",
+             "flag":true
+            }
+     	]
+    },
+    "情報システム構築プロセス":{
+        "flag": true,
+        "items":[
+            {"name":"代表的なプロセスモデル",
+             "flag":true
+            },
+            {"name":"情報システム構築の実際",
+             "flag":true
+            },
+            {"name":"共通フレーム",
+             "flag":true
+            }
+     	]
+    },
+    "インフラ設計":{
+        "flag": true,
+        "items":[
+            {"name":"インフラ設計とは",
+             "flag":true
+            },
+            {"name":"インフラ設計の流れ",
+             "flag":true
+            }
+     	]
+    },"システム分析設計技法":{
+        "flag": true,
+        "items":[
+            {"name":"モデル化とは",
+             "flag":true
+            },
+            {"name":"構造化分析",
+             "flag":true
+            },
+            {"name":"構造化設計",
+             "flag":true
+            },
+            {"name":"オブジェクト指向分析設計",
+             "flag":true
+            },
+            {"name":"支援環境",
+             "flag":true
+            }
+     	]
+    }
+}

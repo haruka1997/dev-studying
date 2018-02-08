@@ -1,0 +1,112 @@
+<!--問題作成フォーム-->
+<div>
+    <ng-include src="'view/problem/problemForm.html'" ng-controller="problemFormController as problemFormCtrl"></ng-include>
+</div>
+
+<!--問題プレビュー表示-->
+<div ng-if="makeProblemCtrl.globalParam.flag.previewProblem">
+    <div tabindex="-1" class="modal fade" id="preview-dialog" aria-hidden="true" >
+        <ng-include src="'view/problem/showProblem.html'" ng-controller="showProblemController as showProblemCtrl"></ng-include>
+    </div>
+</div>
+
+<!--プレビュー画面-->
+<!-- <div tabindex="-1" class="modal fade" id="preview-dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="width:80%;">
+        <div class="modal-content">
+            <button aria-hidden="true" data-dismiss="modal" class="close"type="button" style="margin-right:5px">×</button>
+
+            <div class="common-inputAlert">
+                <div class="alert alert-danger" style="width:98%;"role="alert" ng-repeat="alert in makeProblemCtrl.value.alert">
+                	{{alert}}
+                </div>
+            </div>
+
+            <div class="common-problemSection" ng-show="!makeProblemCtrl.value.flag.alert">
+                <h1 class="common-problemNo">問1</h1>
+                <p class="common-problem" ng-bind-html="makeProblemCtrl.value.previewContent"></p>
+
+                <ol class="common-answer" ng-if="makeProblemCtrl.value.flag.choiceFlag">
+                  <li ng-click="makeProblemCtrl.method.clickAnswer(1);">{{makeProblemCtrl.value.problem.No1}}</li>
+                  <li ng-click="makeProblemCtrl.method.clickAnswer(2);">{{makeProblemCtrl.value.problem.No2}}</li>
+                  <li ng-click="makeProblemCtrl.method.clickAnswer(3);">{{makeProblemCtrl.value.problem.No3}}</li>
+                  <li ng-click="makeProblemCtrl.method.clickAnswer(4);">{{makeProblemCtrl.value.problem.No4}}</li>
+                </ol>
+
+                <div class="common-writeAnswer" ng-if="makeProblemCtrl.value.flag.writeFlag">
+                    <textarea id="kanso" name="kanso" cols="85" rows="5" placeholder="解答を入力"  ng-model="makeProblemCtrl.value.inputAnswer"></textarea>
+                    <button type="button" class="btn btn-primary"ng-click="makeProblemCtrl.method.clickSubmit();"> 解答 </button >
+                </div>
+
+                <div class="common-writeAnswer" ng-if="makeProblemCtrl.value.flag.statementFlag">
+                    <button type="button" class="btn btn-primary"ng-click="makeProblemCtrl.value.flag.showExplain =  true;"style="margin-top:10px;margin-bottom:50px">解答を表示</button >
+                </div>
+
+                <p class="common-judge" ng-if="makeProblemCtrl.value.flag.correct">
+                    <img src="./img/maru.jpg" alt="" width="130"/>
+                </p>
+                <p class="common-judge" ng-if="makeProblemCtrl.value.flag.inCorrect">
+                    <img src="./img/batsu.jpg" alt="" width="130"/>
+                </p>
+
+                <div class="common-explain" ng-if="makeProblemCtrl.value.flag.showExplain">
+                    <span class="box-title">解答</span>
+                    <p>{{makeProblemCtrl.value.problem.answer}}</p>
+                </div>
+                <div class="common-explain" ng-if="makeProblemCtrl.value.flag.correct || makeProblemCtrl.value.flag.inCorrect || makeProblemCtrl.value.flag.showExplain">
+                    <span class="box-title">解説</span>
+                    <p>{{makeProblemCtrl.value.problem.explain}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>-->
+
+<!--投稿確認画面-->
+<div tabindex="-1" class="modal fade" id="submitComfirm-dialog" aria-hidden="true">
+    <div class="modal-dialog">
+    	<div class="modal-content">
+
+            <!--アラート表示-->
+            <div class="common-inputAlert" ng-show="makeProblemCtrl.value.flag.alert">
+                <div class="alert alert-danger" style="width:98%;"role="alert" ng-repeat="alert in makeProblemCtrl.value.alert">
+                    {{alert}}
+                </div>
+            </div>
+
+            <div ng-show="!makeProblemCtrl.value.flag.alert">
+        		<div class="modal-header">
+        			<h2 class="pmd-card-title-text">投稿確認</h2>
+        		</div>
+        		<div class="modal-body">
+        			<p>投稿しますか</p>
+        		</div>
+        		<div class="pmd-modal-action pmd-modal-bordered text-right">
+        			<button data-dismiss="modal" data-target="#submitComp-dialog" data-toggle="modal" ng-click="makeProblemCtrl.method.clickMake();" class="btn pmd-btn-flat pmd-ripple-effect btn-primary" type="button">はい</button>
+        			<button data-dismiss="modal" type="button"class="btn pmd-btn-flat pmd-ripple-effect btn-default">いいえ</button>
+        		</div>
+            </div>
+    	</div>
+    </div>
+</div>
+
+<!--解説投稿完了-->
+<div tabindex="-1" class="modal fade" id="submitComp-dialog" aria-hidden="true">
+<div class="modal-dialog">
+	<div class="modal-content">
+    		<div class="modal-body" style="text-align:center">
+                <!--投稿中-->
+                <div class="loading" ng-if="makeProblemCtrl.value.flag.submiting">
+                  <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                  <span class="sr-only">投稿中...</span>
+                </div>
+                <div ng-if="!makeProblemCtrl.value.flag.submiting" style="padding:1em;">
+                    <p>投稿しました！</p>
+                    <button type="button" data-dismiss="modal"class="btn btn-primary"ng-click="makeProblemCtrl.method.goProblem();"><i class="fa fa-caret-right"></i> 問題を見る </button >
+                </div>
+    		</div>
+        </div>
+	</div>
+</div>
+</div>

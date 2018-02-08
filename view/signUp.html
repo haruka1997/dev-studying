@@ -1,0 +1,28 @@
+<div class="form-wrapper">
+  <h1 class="sign-title"ng-if="!signUpCtrl.value.flag.regist">新規登録</h1>
+  <form ng-if="!signUpCtrl.value.flag.regist">
+      <p ng-if="signUpCtrl.value.flag.empty">未入力欄があります</p>
+      <p ng-if="signUpCtrl.value.flag.email">メールアドレスがすでに登録されています</p>
+   <div class="form-item">
+     <label for="name"></label>
+     <input type="text" name="name" required="required" placeholder="ユーザ名" ng-model="signUpCtrl.value.userName"></input>
+   </div>
+    <div class="form-item">
+      <label for="email"></label>
+      <input type="email" name="email" required="required" placeholder="メールアドレス" ng-model="signUpCtrl.value.email"></input>
+    </div>
+    <div class="form-item">
+      <label for="password"></label>
+      <input type="password" name="password" required="required" placeholder="パスワード" ng-model="signUpCtrl.value.password"></input>
+    </div>
+    <div class="button-panel" ng-click="signUpCtrl.method.clickSubmit();">
+      <input type="submit" class="sign-button" title="Sign In" value="登録"></input>
+    </div>
+  </form>
+  <h1 style="text-align:center;" ng-if="signUpCtrl.value.flag.regist">登録が完了しました！</h1>
+  <form ng-if="signUpCtrl.value.flag.regist">
+     <div class="button-panel" ng-click="signUpCtrl.method.clickLogin();">
+       <input type="submit" class="button" title="toLogin" value="ログイン画面へ"></input>
+     </div>
+ </form>
+</div>

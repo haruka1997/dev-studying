@@ -1,0 +1,112 @@
+{
+	"ソフトウェア設計の概要":{
+        "flag": true,
+        "items":[
+            {"name":"情報システム開発の概要",
+             "flag":true
+             },
+             {"name":"業務用情報システム",
+              "flag":true
+            },
+            {"name":"情報システム開発",
+             "flag":true
+            },
+            {"name":"開発コスト",
+             "flag":true
+            },
+           {"name":"ソフトウェアエンジニアリング",
+            "flag":true
+           },
+           {"name":"情報システム開発の動向",
+            "flag":true
+           }
+     	]
+    },
+    "開発計画書":{
+        "flag": true,
+        "items":[
+            {"name":"データベースとは",
+             "flag":true
+            }
+     	]
+    },
+    "システム提案書":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },
+    "要求分析":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"外部設計":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"内部設計":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"データベース設計":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"UMLによる内部設計":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"プログラミング":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"単体テスト":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"結合および総合テスト":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"品質管理":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"プロジェクトマネージメント":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    }
+}

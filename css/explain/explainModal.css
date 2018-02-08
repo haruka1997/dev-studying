@@ -1,0 +1,28 @@
+.explain-modal-header-icon{
+    float:right;
+    margin-right:25px;
+    margin-top:-3px;
+}
+
+.explain-modal-header-icon i{
+    padding-left: .3em;
+    cursor: pointer;
+}
+
+.common-explain-content{
+    margin-left: 20px;
+    margin-right: 20px;
+    height:auto;
+    min-height: 400px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.explainModal-comment{
+    float:right;
+    display:none;
+    min-height:400px;
+    max-height:400px;
+    overflow:auto;
+    border-left:1px solid #e5e5e5;
+}

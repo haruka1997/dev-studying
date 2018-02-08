@@ -1,0 +1,101 @@
+<div class="common-menu-header">
+    <p>全{{explainListCtrl.value.listExplains.length}}件</p>
+    <div id="right">
+        <div class="radio" style="margin:0px;margin-right:20px;">
+          <label><input type="radio" name="optradio" value="all" ng-checked="explainListCtrl.value.displayRange.all"ng-click="explainListCtrl.method.clickRange('all')">全体</label>
+          <label><input type="radio" name="optradio" value="my" ng-checked="explainListCtrl.value.displayRange.my"ng-click="explainListCtrl.method.clickRange('my')">自分</label>
+        </div>
+    </div>
+</div>
+<div class="common-menu-content" ng-if="!explainListCtrl.globalParam.flag.explainListLoading">
+    <div class="pmd-card pmd-z-depth">
+    	<div class="table-responsive">
+    		<table cellspacing="0" cellpadding="0" class="table pmd-table table-hover" id="table-propeller">
+    			<thead>
+    				<tr>
+    					<th width="30%">タイトル</th>
+    					<th width="10%">作成日 <label ng-click="explainListCtrl.method.clickOrder('作成日');">{{explainListCtrl.value.orderMark.insertTime}}</label></th>
+                        <th width="10%">難易度 <label ng-click="explainListCtrl.method.clickOrder('難易度');">{{explainListCtrl.value.orderMark.difficult}}</label></th>
+                        <th width="10%">理解度 <label ng-click="explainListCtrl.method.clickOrder('理解度');">{{explainListCtrl.value.orderMark.understand}}</label></th>
+    					<!-- <th width="20%">メニュー</th>
+    					<th width="30%">分野</th> -->
+    				</tr>
+    			</thead>
+    			<tbody style="font-size:.9rem;">
+    				<tr ng-repeat="explain in explainListCtrl.value.showExplainInPage[explainListCtrl.value.currentPage-1]" data-target="#explain-dialog" data-toggle="modal"ng-click="explainListCtrl.method.clickExplain(explain);">
+    					<td data-title="タイトル" ng-bind="explain.title"></td>
+    					<td style="text-align:center"data-title="作成日" ng-bind="explain.insertTime | date: 'yyyy/MM/dd'"></td>
+                        <td style="text-align:center" data-title="難易度">
+                            <img ng-repeat="difficult in explain.showEvalute.difficult track by $index" ng-src='{{difficult}}' width="15%" style="margin:.2em;"/>
+                        </td>
+                        <td style="text-align:center" data-title="理解度">
+                            <img ng-repeat="understand in explain.showEvalute.understand track by $index"ng-src='{{understand}}' width="15%"/>
+                        </td>
+    					<!-- <td data-title="メニュー" ng-bind="explain.menu"></td>
+    					<td data-title="分野" ng-bind="explain.field"></td> -->
+    				</tr>
+    			</tbody>
+    		</table>
+    	</div>
+    </div>
+
+    <!--解説がないとき-->
+    <div class="common-no-content" ng-if="explainListCtrl.value.flag.empty">
+        <p>解説がまだありません</p>
+        <button type="button" class="btn btn-primary" ng-click="explainListCtrl.method.clickMakeExplainButton();"><i class="fa fa-pencil" aria-hidden="true"></i> 解説を作成する </button >
+    </div>
+
+    <!--取得エラー-->
+    <div class="common-no-content" ng-if="explainListCtrl.value.flag.error">
+        <p>エラーが発生しました。時間をおいて試してください。</p>
+    </div>
+
+    <!--ページ選択-->
+    <nav style="text-align:center;">
+    	<ul class="pagination">
+    		<li>
+    			<a ng-click="explainListCtrl.method.clickPagination('back');" aria-label="前のページへ">
+    				<span aria-hidden="true">«</span>
+    			</a>
+    		</li>
+    		<li ng-repeat="page in explainListCtrl.value.paginationNumber"><a ng-click="explainListCtrl.method.clickPagination(page);">{{page}}</a></li>
+    		<li>
+    			<a ng-click="explainListCtrl.method.clickPagination('next');" aria-label="次のページへ">
+    				<span aria-hidden="true">»</span>
+    			</a>
+    		</li>
+    	</ul>
+    </nav>
+</div>
+
+
+
+<style>
+.pmd-radio input{
+    display: initial;
+    margin: 0px;
+    position: inherit;
+}
+.radio-inline{
+    vertical-align: baseline;
+    font-size: 13px;
+}
+.modal .radio {
+    margin: 16px 10px;
+}
+
+.radio label{
+    margin-left:10px;
+}
+
+.pagination a {
+    cursor: pointer;
+}
+
+#table-propeller tbody tr{
+    cursor: pointer;
+}
+
+#table-propeller thead tr th{
+    text-align: center;
+}

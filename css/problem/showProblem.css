@@ -1,0 +1,90 @@
+.problem-evalute{
+    margin-left: 40px;
+    padding: .5em;
+}
+
+.problem-evalute textarea{
+    width: 95%;
+    margin-left: 10px;
+}
+
+.problem-modal-header-icon{
+    float:right;
+    margin-right:25px;
+    margin-top:-3px;
+}
+
+.problem-modal-header-icon i{
+    padding-left: .3em;
+    cursor: pointer;
+}
+
+.common-writeAnswer{
+    margin-left: 40px;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.common-writeAnswer textarea{
+    font-size: 14px;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+.common-explain {
+    position: relative;
+    padding: 0.5em 1em;
+    border: solid 1.5px #4790BB;
+    border-radius: 5px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    width:90%;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+
+.common-explain .box-title{
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: #FFF;
+    color: #4790BB;
+    font-weight: bold;
+}
+
+.common-explain p{
+   margin: 10;
+   padding: 0.5em;
+}
+
+.common-judge{
+    margin-left: 50px;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+
+.evaluation-items{
+    margin:10px;
+}
+
+.radio label{
+    margin-right: 20px;
+}
+
+.problem-answer_rate{
+    margin-left: 20px;
+    font-weight: normal;
+    font-size: 17px;
+}

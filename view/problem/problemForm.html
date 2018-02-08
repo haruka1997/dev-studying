@@ -1,0 +1,69 @@
+<div class="common-problemBox">
+
+    <div class="tabMenu">
+    <a ng-click="problemFormCtrl.method.styleChange(0);" class="common-tabBtn" ng-style="problemFormCtrl.value.style.choiceStyle"><i class="fa fa-check-square-o" aria-hidden="true"></i> 選択肢式</a>
+    <a ng-click="problemFormCtrl.method.styleChange(1);" class="common-tabBtn"ng-style="problemFormCtrl.value.style.writeStyle"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 書き込み式</a>
+    <a ng-click="problemFormCtrl.method.styleChange(2);" class="common-tabBtn"ng-style="problemFormCtrl.value.style.statementStyle"><i class="fa fa-file-text-o" aria-hidden="true"></i> 論述式</a>
+    </div>
+
+    <!--問題作成フォーム-->
+    <div class="common-problemBox-title">問題作成フォーム</div>
+
+    <div class="pmd-card pmd-card-default pmd-z-depth pmd-card-custom-form">
+        <div class="pmd-card-body">
+            <!--問題文-->
+            <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                <label for="regular1" class="control-label">
+                 問題文
+                </label>
+                <textarea type="text" id="regular1" cols="120" rows="5"style="height:auto"class="form-control" ng-model="problemFormCtrl.value.problem.problem"></textarea>
+            </div>
+            <!--選択式の解答欄-->
+            <div class="form-group pmd-textfield pmd-textfield-floating-label" ng-show="problemFormCtrl.value.flag.choiceFlag">
+              <ol class="common-answer-list">
+                <li ng-click="problemFormCtrl.method.clickChoiceAnswer(1)"><input type="text" placeholder="選択肢1" ng-model="problemFormCtrl.value.problem.No1"/></li>
+                <li ng-click="problemFormCtrl.method.clickChoiceAnswer(2)"><input type="text" placeholder="選択肢2" ng-model="problemFormCtrl.value.problem.No2"/></li>
+                <li ng-click="problemFormCtrl.method.clickChoiceAnswer(3)"><input type="text" placeholder="選択肢3" ng-model="problemFormCtrl.value.problem.No3"/></li>
+                <li ng-click="problemFormCtrl.method.clickChoiceAnswer(4)"><input type="text" placeholder="選択肢4" ng-model="problemFormCtrl.value.problem.No4"/></li>
+              </ol>
+              <p class="help-block">正解番号をクリックしてください</p>
+              <p class="help-block">正解番号：{{problemFormCtrl.value.problem.answer}}</p>
+            </div>
+            <!--書き取り式の解答欄-->
+            <div class="form-group pmd-textfield pmd-textfield-floating-label"ng-show="problemFormCtrl.value.flag.writeFlag">
+                <label for="regular2" class="control-label">
+                 解答文
+                </label>
+                <textarea type="text" id="regular2" cols="120" rows="5"style="height:auto"class="form-control" ng-model="problemFormCtrl.value.problem.answer"></textarea>
+            </div>
+            <!--論述式の解答欄-->
+            <div class="form-group pmd-textfield pmd-textfield-floating-label"ng-show="problemFormCtrl.value.flag.statementFlag">
+                <label for="regular3" class="control-label">
+                 解答文
+                </label>
+                <textarea type="text" id="regular3" cols="120" rows="5"style="height:auto"class="form-control" ng-model="problemFormCtrl.value.problem.answer"></textarea>
+            </div>
+            <!--解説-->
+            <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                <label for="regular4" class="control-label">
+                 解説文
+                </label>
+                <textarea type="text" id="regular4" cols="120" rows="7"style="height:auto"class="form-control" ng-model="problemFormCtrl.value.problem.explain"></textarea>
+            </div>
+            <!--公開範囲-->
+            <div class="radio" style="text-align:center;">
+                <div class="radio">
+                  <label><input type="radio" value="全体公開"  id="radio01" ng-model="value">全体公開</label>
+                  <label style="margin-left:20px;"><input type="radio" value="非公開"  id="radio02" ng-model="value">非公開</label>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <div class="common-menu-footerBtn">
+    <!--プレビュー表示-->
+    <button type="button" class="btn btn-primary" data-target="#preview-dialog" ng-click="problemFormCtrl.method.clickPreview();"data-toggle="modal"><i class="fa fa-eye" aria-hidden="true"></i> プレビュー </button >
+    <!--作成決定-->
+    <button type="button" class="btn btn-primary" data-dismiss="modal"ng-click="problemFormCtrl.method.dataCheck(value);" data-target="#submitComfirm-dialog" data-toggle="modal"><i class="fa fa-pencil" aria-hidden="true"></i> 作成 </button >
+    </div>
+</div>

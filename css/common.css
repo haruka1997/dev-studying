@@ -1,0 +1,76 @@
+.loading{
+    text-align:center;
+    padding:1em;
+}
+
+/* アラート */
+.common-inputAlert{
+    text-align:center;
+    padding:1em;
+    height:auto;
+}
+
+.common-tabBtn{
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    cursor:pointer;
+}
+.common-tabBtn:active {/*ボタンを押したとき*/
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+}
+
+.common-menu-footerBtn{
+    position: inherit;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.bar1 {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #f2f2f2;
+  border: 0;
+  margin: 0;
+}
+
+.common-course-menu{
+    display:flex;
+    margin-top:10px;
+}
+
+.common-course-menu #card{
+    width:50%;
+    float:left;
+    margin:.5em;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+}
+
+.common-course-menu #card:hover{
+    box-shadow: 0 5px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+}
+
+.common-course-menu h2{
+    font-size:1.1em;
+}
+
+.common-course-menu span{
+    font-size:1.0em;
+}
+
+.common-evalute-content{
+    margin-left: 20px;
+    margin-right: 20px;
+    height: auto;
+}
+
+.common-evalute-content textarea{
+    width:80%;
+    margin-left: 20px;
+}

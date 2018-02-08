@@ -1,0 +1,32 @@
+.groupStudy-tabContent-footer{
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    height: auto;
+    text-align: center;
+}
+
+.groupStudy-tabContent-footer button{
+    margin: .5em;
+}
+
+.groupStudy-navContent{
+    font-size: .8em;
+    margin:10px 5%;
+}
+
+.groupStudy-topBtn{
+    top:150px;
+    float:right;
+    margin-right: 40px;
+}
+.groupStudy-answer-icon{
+    float:right;
+    margin-top:-15px;
+    margin-right:30px;
+}
+
+.groupStudy-answer-icon div{
+    margin-right: 30px;
+    cursor: pointer;
+}

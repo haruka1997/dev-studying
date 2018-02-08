@@ -1,0 +1,63 @@
+/*.common-explain-content{
+    margin-left: 20px;
+    margin-right: 20px;
+    height:auto;
+    min-height: 400px;
+    max-height: 400px;
+    overflow: auto;
+}*/
+
+/*.common-ExplainBox {
+    margin: 1em 0;
+    background: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.common-ExplainBox .common-ExplainBox-title {
+    font-size: 1.2em;
+    background: #4790BB;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+}*/
+
+.common-explainMake{
+    position: relative;
+    margin: 2em 0;
+    padding: 25px 10px 7px;
+    border: solid 2px #4790BB;
+    width: 90%;
+    margin-left:30px;
+}
+
+.common-explainMake .common-explainMakeTitle-title{
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    padding: 0 9px;
+    background: #4790BB;
+    color: #ffffff;
+}
+
+.common-explainMake textarea{
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 95%;
+    font-size: 14px;
+}
+
+.common-makeBox-footer{
+    text-align: center;
+    height:auto;
+    padding-bottom: 10px;
+}
+
+.common-comp-content{
+    text-align:center;
+    padding:1.3em;
+}
+.common-comp-content p{
+    font-size:18px;
+    font-weight:bold;
+}

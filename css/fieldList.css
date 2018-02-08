@@ -1,0 +1,49 @@
+.fieldList-menu {
+    width: 500px;
+    padding: 0;
+    margin: 30px;
+}
+.fieldList-menu li {
+    overflow: hidden;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+
+.fieldList-menu li a {
+    display: block;
+    position: relative;
+    padding: 0px 10px 0px 50px;
+    background: #f2f2f2;
+    color: #494949;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.fieldList-menu li a:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    width: 8px;
+    height: 8px;
+    margin-top: -4px;
+    border-radius: 50%;
+    background: #4790BB;
+    transition-property:all;
+    transition: 0.2s linear;
+    color: #494949;
+}
+.fieldList-menu li a:hover:before {
+    left: -16px;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    transition-property:all;
+    transition: 0.2s linear;
+    color: #494949;
+}
+
+.collapsed:hover{
+    color:#494949;
+}

@@ -1,0 +1,451 @@
+<!--プロフィール-->
+<div class="menu" style="text-align: center;">
+    <h1 id="title">プロフィール</h1>
+    <ul ng-if="myPageCtrl.value.flag.loading">
+      <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+      <span class="sr-only">Loading...</span>
+    </ul>
+    <img class="myPage-profileImg" ng-src='{{myPageCtrl.value.userInfo.userIcon}}'><br>
+    <table class="myPage-profileTable"ng-if="!myPageCtrl.value.flag.loading">
+    	<tr>
+    		<th scope="row">名前</th>
+    		<td>{{myPageCtrl.value.userInfo.userName}}</td>
+    	</tr>
+        <tr>
+    		<th scope="row">自己紹介</th>
+    		<td>{{myPageCtrl.value.userInfo.introduction}}</td>
+    	</tr>
+        <tr>
+    		<th scope="row">目標</th>
+    		<td>{{myPageCtrl.value.userInfo.goal}}</td>
+    	</tr>
+    </table>
+    <div class="common-menu-footerBtn">
+        <button type="button" class="btn btn-primary" data-target="#detailProfile-dialog" data-toggle="modal"><i class="fa fa-pencil" aria-hidden="true"></i> プロフィール編集 </button >
+    </div>
+</div>
+
+<!--プロフィール編集ダイアログ-->
+<div tabindex="-1" class="modal fade" id="detailProfile-dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="width:80%;">
+        <div class="modal-content">
+            <!--ダイアログヘッダ-->
+            <div class="modal-header pmd-modal-bordered">
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                <h2 class="pmd-card-title-text">プロフィール編集</h2>
+            </div>
+            <div class="myPage-detailProfile">
+                <label>
+                    <span class="btn btn-primary">
+                        <i class="fa fa-file-o" aria-hidden="true"></i> 画像を選択
+                        <input type="file" file-model="file"style="display:none">
+                    </span>
+                </label><br>
+                <img ng-src='{{myPageCtrl.value.detailUserInfo.userIcon}}' max-width='50%' max-heigh='30%'><br>
+                <div class="form-group pmd-textfield">
+                  <label for="regular1" class="control-label">
+                     名前
+                  </label>
+                  <input type="text" id="regular1" class="form-control" ng-model="myPageCtrl.value.detailUserInfo.userName">
+                </div>
+                <div class="form-group pmd-textfield">
+                  <label class="control-label">自己紹介</label>
+                  <textarea required class="form-control" ng-model="myPageCtrl.value.detailUserInfo.introduction"></textarea>
+                </div>
+                <div class="form-group pmd-textfield">
+                  <label class="control-label">目標</label>
+                  <textarea required class="form-control" ng-model="myPageCtrl.value.detailUserInfo.goal"></textarea>
+                </div>
+            </div>
+            <!--作成orやめるボタン-->
+            <div class="pmd-modal-action text-right pmd-modal-bordered">
+                <button data-dismiss="modal" ng-click="myPageCtrl.method.clickDetailComp();" data-target="#complite-dialog" data-toggle="modal" class="btn pmd-ripple-effect btn-primary pmd-btn-flat" type="button">完了</button>
+                <button data-dismiss="modal" class="btn pmd-ripple-effect btn-primary pmd-btn-flat" type="button">やめる</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--投稿完了画面-->
+<div tabindex="-1" class="modal fade" id="complite-dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="width:50%;">
+        <div class="modal-content" style="text-align:center;height:auto;padding:.5em;">
+            <!--投稿中-->
+            <div class="loading" ng-if="myPageCtrl.value.flag.compliting">
+              <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+              <span class="sr-only">投稿中...</span>
+            </div>
+            <div ng-if="!myPageCtrl.value.flag.compliting">
+                <h2 >プロフィールを変更しました</h2>
+                <button type="button" data-dismiss="modal"class="btn btn-primary"ng-click="myPageCtrl.method.init();"><i class="fa fa-caret-right"></i> マイページに戻る </button >
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--解説表示-->
+<div ng-if="indexCtrl.value.flag.showExplain">
+    <div tabindex="-1" class="modal fade" id="explain-dialog" aria-hidden="true">
+        <ng-include src="'view/explain/showExplain.html'" ng-controller="showExplainController as showExplainCtrl"></ng-include>
+    </div>
+</div>
+
+<!--問題表示-->
+<div ng-if="indexCtrl.value.flag.showProblem">
+    <div tabindex="-1" class="modal fade" id="problem-dialog" aria-hidden="true" >
+        <ng-include src="'view/problem/showProblem.html'" ng-controller="showProblemController as showProblemCtrl"></ng-include>
+    </div>
+</div>
+
+<div class="myPageBox">
+    <!--メニューバー-->
+    <div class="tabMenu">
+        <a ng-click="myPageCtrl.method.styleChange(1);" class="common-tabBtn" ng-style="myPageCtrl.value.style.report">レポート</a>
+        <a ng-click="myPageCtrl.method.styleChange(2);" class="common-tabBtn"ng-style="myPageCtrl.value.style.studyRecord">学習履歴</a>
+        <a ng-click="myPageCtrl.method.styleChange(3);" class="common-tabBtn"ng-style="myPageCtrl.value.style.post">ポスト</a>
+        <a ng-click="myPageCtrl.method.styleChange(4);" class="common-tabBtn"ng-style="myPageCtrl.value.style.bookmark">ブックマーク</a>
+    </div>
+
+
+    <div class="myPageContent">
+        <!--レポートタブ-->
+        <div class="myPage-content-nav" ng-show="myPageCtrl.value.flag.reportFlag">
+            <!--今週の学習-->
+            <nav class="myPageNav">
+                <div class="navTitle">
+                <h2><i class="fa fa-pencil"></i>  今週の学習状況</h2>
+                </div>
+                <ul style="text-align:center;"ng-if="myPageCtrl.value.flag.loading">
+                  <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                  <span class="sr-only">Loading...</span>
+                </ul>
+                <div class="chart">
+                    <canvas id="studyTimeChart"></canvas>
+                </div>
+                <hr class="bar1">
+                <div class="chart">
+                    <canvas id="countChart"></canvas>
+                </div>
+                <hr class="bar1">
+            </nav>
+        </div>
+
+        <!--学習記録タブ-->
+        <div ng-show="myPageCtrl.value.flag.studyRecordFlag" class="myPage-content-nav" >
+            <div ng-if="!myPageCtrl.value.flag.showStudyRecord">
+                <div class="common-course-menu">
+                    <div class="pmd-card pmd-card-media-inline pmd-card-default pmd-z-depth" id="card" ng-click="myPageCtrl.method.clickStudyRecord('makeExplain')">
+                        <div class="pmd-card-media">
+                            <div class="media-left media-middle">
+                                <a href="javascript:void(0);">
+                                    <img width="112" height="112" ng-src="{{myPageCtrl.value.img.makeExplain}}">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h2 class="pmd-card-title-text">作成した解説を見る</h2>
+                                <span class="pmd-card-subtitle-text">作成した解説を表示します</span>
+                            </div>
+                        </div>
+                        <div class="pmd-card-actions">
+                        </div>
+                    </div>
+
+                    <div class="pmd-card pmd-card-media-inline pmd-card-default pmd-z-depth" id="card" ng-click="myPageCtrl.method.clickStudyRecord('makeProblem')">
+                        <div class="pmd-card-media">
+                            <div class="media-left media-middle">
+                                <a href="javascript:void(0);">
+                                    <img width="112" height="112" ng-src="{{myPageCtrl.value.img.makeProblem}}">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h2 class="pmd-card-title-text">作成した問題を見る</h2>
+                                <span class="pmd-card-subtitle-text">作成した問題を表示します</span>
+                            </div>
+                        </div>
+                        <div class="pmd-card-actions">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="common-course-menu">
+                    <div class="pmd-card pmd-card-media-inline pmd-card-default pmd-z-depth" id="card" ng-click="myPageCtrl.method.clickStudyRecord('evaluteExplain')">
+                        <div class="pmd-card-media">
+                            <div class="media-left media-middle">
+                                <a href="javascript:void(0);">
+                                    <img width="112" height="112" ng-src="{{myPageCtrl.value.img.evaluteExplain}}">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h2 class="pmd-card-title-text">評価した解説を見る</h2>
+                                <span class="pmd-card-subtitle-text">評価した解説を表示します</span>
+                            </div>
+
+                        </div>
+                        <div class="pmd-card-actions">
+                        </div>
+                    </div>
+
+                    <div class="pmd-card pmd-card-media-inline pmd-card-default pmd-z-depth" id="card" ng-click="myPageCtrl.method.clickStudyRecord('evaluteProblem')">
+                        <div class="pmd-card-media">
+                            <div class="media-left media-middle">
+                                <a href="javascript:void(0);">
+                                    <img width="112" height="112" ng-src="{{myPageCtrl.value.img.evaluteProblem}}">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h2 class="pmd-card-title-text">評価した問題を見る</h2>
+                                <span class="pmd-card-subtitle-text">評価した問題を表示します</span>
+                            </div>
+                        </div>
+                        <div class="pmd-card-actions">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--学習記録リスト表示-->
+            <div ng-if="myPageCtrl.value.flag.showStudyRecord">
+                <nav class="myPageNav">
+                    <nav>
+                    	<ul class="pager">
+                    		<li class="previous"><a ng-click="myPageCtrl.value.flag.showStudyRecord=false" style="cursor:pointer"><< 戻る</a></li>
+                    	</ul>
+                    </nav>
+                    <div>
+                        <h2><i class="fa fa-list" aria-hidden="true"></i> {{myPageCtrl.value.studyRecordTitle}}</h2>
+                        <hr class="bar1">
+                    </div>
+                    <!--解説リスト読み込み中-->
+                    <div class="loading" ng-if="indexCtrl.value.flag.explainListLoading">
+                      <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                      <span class="sr-only">Loading...</span>
+                    </div>
+
+                    <!--解説リスト表示-->
+                    <div ng-if="indexCtrl.value.flag.explainList">
+                        <ng-include src="'view/explain/explainList.html'" ng-controller="explainListController as explainListCtrl"></ng-include>
+                    </div>
+
+                    <!-- 問題リスト -->
+                    <!--loading-->
+                    <div class="loading" ng-if="indexCtrl.value.flag.problemListLoading">
+                      <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                      <span class="sr-only">Loading...</span>
+                    </div>
+
+                    <!--問題リスト表示-->
+                    <div ng-if="myPageCtrl.value.flag.showProblemList">
+                        <ng-include src="'view/problem/problemList.html'" ng-controller="problemListController as problemListCtrl"></ng-include>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!--ポストタブ-->
+        <div ng-show="myPageCtrl.value.flag.postFlag" class="myPage-content-nav" >
+            <nav class="myPageNav">
+
+                <div ng-if="!myPageCtrl.value.flag.showPost">
+                    <div class="common-course-menu">
+                        <div class="pmd-card pmd-card-media-inline pmd-card-default pmd-z-depth" id="card" ng-click="myPageCtrl.method.clickPost('explain')">
+                            <div class="pmd-card-media">
+                                <div class="media-left media-middle">
+                                    <a href="javascript:void(0);">
+                                        <img width="112" height="112" ng-src='{{myPageCtrl.value.img.postExplain}}'>
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h2 class="pmd-card-title-text">解説宛てのコメントを見る</h2>
+                                    <span class="pmd-card-subtitle-text">解説に届いたコメントを見る</span>
+                                </div>
+                            </div>
+                            <div class="pmd-card-actions">
+                            </div>
+                        </div>
+
+                        <div class="pmd-card pmd-card-media-inline pmd-card-default pmd-z-depth" id="card" ng-click="myPageCtrl.method.clickPost('problem')">
+                            <div class="pmd-card-media">
+                                <div class="media-left media-middle">
+                                    <a href="javascript:void(0);">
+                                        <img width="112" height="112" ng-src='{{myPageCtrl.value.img.postProblem}}'>
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h2 class="pmd-card-title-text">問題宛てのコメントを見る</h2>
+                                    <span class="pmd-card-subtitle-text">問題に届いたコメントを見る</span>
+                                </div>
+                            </div>
+                            <div class="pmd-card-actions">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div ng-if="myPageCtrl.value.flag.showPost">
+                    <nav>
+                    	<ul class="pager">
+                    		<li class="previous"><a ng-click="myPageCtrl.value.flag.showPost=false" style="cursor:pointer"><< 戻る</a></li>
+                    	</ul>
+                    </nav>
+                    <div>
+                        <h2><i class="fa fa-comment" aria-hidden="true"></i> {{myPageCtrl.value.postTitle}}</h2>
+                        <hr class="bar1">
+                    </div>
+                    <div class="common-menu-content">
+                        <div class="pmd-card pmd-z-depth">
+                        	<div class="table-responsive">
+                        		<table cellspacing="0" cellpadding="0" class="table pmd-table table-hover" id="table-propeller">
+                        			<thead>
+                        				<tr>
+                        					<th width="40%">コメント</th>
+                        					<th width="10%">作成日</th>
+                                            <th width="10%">ユーザ</th>
+                        					<th width="20%">メニュー</th>
+                        					<th width="20%">分野</th>
+                        				</tr>
+                        			</thead>
+                        			<tbody style="font-size:.9rem;">
+                        				<tr ng-repeat="comment in myPageCtrl.value.comment | orderBy: '-insertTime'" data-target="#explain-dialog" data-toggle="modal"ng-click="explainListCtrl.method.clickExplain(explain);">
+                        					<td data-title="コメント" ng-bind="comment.post.comment"></td>
+                        					<td data-title="作成日" ng-bind="comment.post.insertTime | date: 'yyyy/MM/dd'"></td>
+                                            <td data-title="ユーザ" ng-bind="comment.post.fromUser.userName"></td>
+                        					<td data-title="メニュー" ng-bind="comment.item.menu"></td>
+                        					<td data-title="分野" ng-bind="comment.item.field"></td>
+                        				</tr>
+                        			</tbody>
+                        		</table>
+                        	</div>
+                        </div>
+
+                        <ul style="text-align:center;"ng-if="myPageCtrl.value.flag.postLoading">
+                          <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                          <span class="sr-only">Loading...</span>
+                        </ul>
+
+                        <nav style="text-align:center;">
+                        	<ul class="pagination">
+                        		<li>
+                        			<a ng-click="explainListCtrl.method.clickBackPage();" aria-label="前のページへ">
+                        				<span aria-hidden="true">«</span>
+                        			</a>
+                        		</li>
+                        		<li ng-repeat="page in explainListCtrl.value.showExplainPage"><a ng-click="explainListCtrl.method.clickPage(page);">{{page}}</a></li>
+                        		<li>
+                        			<a ng-click="explainListCtrl.method.clickNextPage();" aria-label="次のページへ">
+                        				<span aria-hidden="true">»</span>
+                        			</a>
+                        		</li>
+                        	</ul>
+                        </nav>
+                    </div>
+                    <ul ng-if="myPageCtrl.value.comment.length==0 && !myPageCtrl.value.flag.postLoading">
+                        <li>ポストはありません</li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!--ブックマークタブ-->
+        <div ng-show="myPageCtrl.value.flag.bookmarkFlag" class="myPage-content-nav" >
+            <nav class="myPageNav">
+                <ul style="text-align:center;" ng-if="myPageCtrl.value.flag.bookmarkLoading">
+                  <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                  <span class="sr-only">Loading...</span>
+                </ul>
+                <!-- ブックマークリスト -->
+                <div class="pmd-card pmd-z-depth" ng-if="myPageCtrl.value.flag.bookmarkList">
+                    <div class="table-responsive">
+                        <table cellspacing="0" cellpadding="0" class="table pmd-table table-hover" id="table-propeller">
+                            <thead>
+                                <tr>
+                                    <th width="30%">名前</th>
+                                    <th width="50%">説明</th>
+                                    <th width="15%">種類</th>
+                                    <th width="5%"></th>
+                                </tr>
+                            </thead>
+                            <tbody style="font-size:.9rem;">
+                                <tr ng-repeat="bookmark in myPageCtrl.value.bookmark | orderBy: '-insertTime'"ng-click="myPageCtrl.method.clickBookmark(bookmark)">
+                                    <td data-title="コメント" ng-bind="bookmark.name"></td>
+                                    <td data-title="説明" ng-bind="bookmark.explain"></td>
+                                    <td data-title="種類" ng-bind="bookmark.type"></td>
+                                    <td data-title=""><i class="material-icons media-right">delete</i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- ブックマークアイテムリスト -->
+                <div ng-if="!myPageCtrl.value.flag.bookmarkList && !myPageCtrl.value.flag.bookmarkLoading">
+                    <nav>
+                    	<ul class="pager">
+                    		<li class="previous"><a ng-click="myPageCtrl.value.flag.bookmarkList=true" style="cursor:pointer"><< 戻る</a></li>
+                    	</ul>
+                    </nav>
+                    <div>
+                        <h2><i class="fa fa-bookmark" aria-hidden="true"></i> {{myPageCtrl.value.selectBookmark.name}}</h2>
+                        <span class="pmd-card-subtitle-text">{{myPageCtrl.value.selectBookmark.explain}}</span>
+                        <hr class="bar1">
+                    </div>
+                    <ul ng-if="myPageCtrl.value.flag.bookmarkItemEmpty">
+                        <li>まだ追加されていません</li>
+                    </ul>
+                    <!--ブックマーク解説アイテム-->
+                    <div ng-if="myPageCtrl.value.selectBookmark.type=='解説'">
+                        <ng-include src="'view/explain/explainList.html'" ng-controller="explainListController as explainListCtrl"></ng-include>
+                    </div>
+                    <!--ブックマーク問題アイテム-->
+                    <div ng-if="myPageCtrl.value.selectBookmark.type=='問題'">
+                        <ng-include src="'view/problem/problemList.html'" ng-controller="problemListController as problemListCtrl"></ng-include>
+                    </div>
+                </div>
+                <ul ng-if="">
+                    <li>ブックマークはありません</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<!--ブックマーク作成ダイアログ-->
+<div tabindex="-1" class="modal fade" id="bookmarkCreate-dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="width:80%;">
+        <div class="modal-content">
+            <!--ダイアログヘッダ-->
+            <div class="modal-header pmd-modal-bordered">
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                <h2 class="pmd-card-title-text">ブックマーク作成</h2>
+            </div>
+            <div class="myPage-bookmarkCreate">
+                <div class="form-group pmd-textfield">
+                  <label for="regular1" class="control-label">
+                     ブックマーク名
+                  </label>
+                  <input type="text" id="regular1" class="form-control" ng-model="myPageCtrl.value.createBookmark.name">
+                </div>
+                <div class="form-group pmd-textfield">
+                  <label class="control-label">説明</label>
+                  <textarea required class="form-control" ng-model="myPageCtrl.value.createBookmark.explain"></textarea>
+                </div>
+                <label class="myPage-radioTitle">種類</label>
+                <div class="radio">
+                    <div class="radio">
+                      <label><input type="radio" value="解説"  id="radio01" ng-model="type">解説</label>
+                      <label style="margin-left:20px;"><input type="radio" value="問題"  id="radio01" ng-model="type">問題</label>
+                    </div>
+				</div>
+                <label class="myPage-radioTitle" style="margin-top:10px;">公開範囲</label>
+                <div class="radio">
+                    <div class="radio">
+                      <label><input type="radio" value="公開"  id="radio01" ng-model="range">公開</label>
+                      <label style="margin-left:20px;"><input type="radio" value="非公開"  id="radio01" ng-model="range">非公開</label>
+                    </div>
+				</div>
+            </div>
+            <!--作成orやめるボタン-->
+            <div class="pmd-modal-action text-right pmd-modal-bordered">
+                <button data-dismiss="modal" ng-click="myPageCtrl.method.clickCreateBookmark(type,range);" data-target="#complite-dialog" data-toggle="modal" class="btn pmd-ripple-effect btn-primary pmd-btn-flat" type="button">完了</button>
+                <button data-dismiss="modal" class="btn pmd-ripple-effect btn-primary pmd-btn-flat" type="button">やめる</button>
+            </div>
+        </div>
+    </div>
+</div>

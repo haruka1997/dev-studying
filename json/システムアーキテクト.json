@@ -1,0 +1,34 @@
+{
+	"午前Ⅱ":{
+        "flag": true,
+        "items":[
+            {"name":"H29",
+             "flag":true
+             },
+             {"name":"H28",
+              "flag":true
+             },
+             {"name":"H27",
+              "flag":true
+             },
+              {"name":"H26",
+               "flag":true
+             },
+             {"name":"H25",
+              "flag":true
+             },
+             {"name":"H24",
+               "flag":true
+             },
+             {"name":"H23",
+              "flag":true
+             },
+             {"name":"H22",
+               "flag":true
+             },
+             {"name":"H21",
+               "flag":true
+             }
+     	]
+    }
+}

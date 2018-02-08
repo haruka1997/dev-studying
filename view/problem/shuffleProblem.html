@@ -1,0 +1,79 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="css/shuffle.css" />
+</head>
+
+<!--loading-->
+<div class="loading" ng-if="shuffleProblemCtrl.value.flag.loading">
+  <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+  <span class="sr-only">Loading...</span>
+</div>
+<div ng-if="!shuffleProblemCtrl.value.flag.showProblem">
+    <div class="alert alert-success" role="alert">
+    	出題範囲を選択してください。
+    </div>
+    <div class="shuffle-checkbox">
+        <div class="shuffle-fieldParent" ng-repeat="key in shuffleProblemCtrl.value.key">
+            <div>
+                <div class="checkbox pmd-default-theme">
+                    <label class="pmd-checkbox pmd-checkbox-ripple-effect">
+                        <input type="checkbox" value="" ng-click="shuffleProblemCtrl.method.clickParent(key)"ng-model="shuffleProblemCtrl.value.items[key].flag">
+                        <span>{{key}}</span>
+                    </label>
+                </div>
+            </div>
+            <div class="shuffle-fieldChild" ng-repeat="item in shuffleProblemCtrl.value.items[key].items">
+                <div class="checkbox pmd-default-theme">
+                    <label class="pmd-checkbox pmd-checkbox-ripple-effect">
+                        <input type="checkbox" value="" ng-model="item.flag" ng-click="shuffleProblemCtrl.method.clickChild(key,item)">
+                        <span>{{item.name}}</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="alert alert-info" role="alert">
+        出題数を選択してください。
+    </div>
+    <div>
+        <div class="radioButton">
+            <input type="radio"  value="10"  id="radio01" ng-model="value" checked/>
+            <label for="radio01" class="radio">10問以下</label>
+
+            <input type="radio" value="20" id="radio02" ng-model="value"/>
+            <label for="radio02" class="radio">20問以下</label>
+
+            <input type="radio" value="30" id="radio03" ng-model="value"/>
+            <label for="radio03" class="radio">30問以下</label>
+        </div>
+    </div>
+
+    <div class="shuffle-footer-menu">
+    <button type="button" class="btn btn-primary" ng-click="shuffleProblemCtrl.method.clickStart(value);"> 出題開始 </button >
+    </div>
+</div>
+
+<style>
+input[type=checkbox] {
+    display: inline;
+}
+.pmd-checkbox [type=checkbox]:checked{
+    left: 0px;
+}
+.pmd-checkbox [type=checkbox]:not(:checked){
+    left: 0px;
+}
+.alert-success{
+    width: 95%;
+    text-align: center;
+    line-height: .5em;
+    margin-left: 3%;
+    margin-top: 10px;
+}
+.alert-info{
+    width: 95%;
+    text-align: center;
+    line-height: .5em;
+    margin-left: 3%;
+    margin-top: 10px;
+}
+</style>

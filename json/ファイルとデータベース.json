@@ -1,0 +1,86 @@
+{
+	"情報システムにおけるファイルやデータベース":{
+        "flag": true,
+        "items":[
+            {"name":"ファイルとは",
+             "flag":true
+             },
+             {"name":"データベースとは",
+              "flag":true
+             }
+     	]
+    },
+    "ストレージとファイルシステム":{
+        "flag": true,
+        "items":[
+            {"name":"データベースとは",
+             "flag":true
+            }
+     	]
+    },
+    "データモデル":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },
+    "リレーショナル代数":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"正規化":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"データモデリング":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"スキーマ設計":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"SQL":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"トランザクションと同時実行制御":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"障害処理":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"先端データベース":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    }
+}

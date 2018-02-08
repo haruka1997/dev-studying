@@ -1,0 +1,34 @@
+<div class="common-ExplainBox"　ng-controller="explainFormController as explainFormCtrl">
+    <div class="common-ExplainBox-title"><i class="fa fa-pencil" aria-hidden="true"></i> 解説作成フォーム</div>
+    <div class="pmd-card pmd-card-default pmd-z-depth pmd-card-custom-form">
+        <div class="pmd-card-body">
+            <!--タイトル-->
+            <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                <label for="regular1" class="control-label">
+                 タイトル
+                </label>
+                <input type="text" id="regular1" class="form-control" ng-model="explainFormCtrl.value.explain.title">
+            </div>
+            <!--解説-->
+            <div class="form-group pmd-textfield pmd-textfield-floating-label">
+              <label for="help1">
+                  内容
+              </label>
+              <textarea type="text" id="help1" class="form-control" cols="120" rows="20" style="height:auto;"ng-model="explainFormCtrl.value.explain.content"></textarea>
+              <p class="help-block" style="cursor:pointer;"ng-click="explainFormCtrl.method.clickCodeExplain();"><i class="fa fa-question-circle" aria-hidden="true"></i> コードの書き方(別タブ)</p>
+            </div>
+            <!--公開範囲-->
+            <div class="radio" style="text-align:center;">
+                <div class="radio">
+                  <label><input type="radio" value="全体公開"  id="radio01" ng-model="value">全体公開</label>
+                  <label style="margin-left:20px;"><input type="radio" value="非公開"  id="radio02" ng-model="value">非公開</label>
+                </div>
+            </div>
+         </div>
+    </div>
+    <!--フッターボタン-->
+    <div class="common-menu-footerBtn">
+       <button type="button" class="btn btn-primary" data-target="#preview-dialog" ng-click="explainFormCtrl.method.clickPreview();"data-dismiss="modal" data-toggle="modal"><i class="fa fa-eye" aria-hidden="true"></i> プレビュー </button >
+       <button type="button" class="btn btn-primary" data-dismiss="modal"ng-click="explainFormCtrl.method.dataCheck(value);"data-target="#submitComfirm-dialog" data-toggle="modal"><i class="fa fa-pencil" aria-hidden="true"></i> 作成 </button >
+    </div>
+</div>

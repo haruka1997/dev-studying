@@ -1,0 +1,14 @@
+.common-ExplainBox {
+    margin: 1em 0;
+    background: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.common-ExplainBox .common-ExplainBox-title {
+    font-size: 1.2em;
+    background: #4790BB;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+}

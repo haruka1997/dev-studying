@@ -1,0 +1,105 @@
+<!--解説リスト表示-->
+<div ng-if="referExplainCtrl.globalParam.flag.explainList">
+    <div class="list">
+        <ng-include src="'view/explain/explainList.html'" ng-controller="explainListController as explainListCtrl"></ng-include>
+    </div>
+</div>
+
+<!--読み込み中-->
+<div class="loading" ng-if="referExplainCtrl.globalParam.flag.explainListLoading">
+  <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+  <span class="sr-only">Loading...</span>
+</div>
+
+<!--解説モーダル表示-->
+<div ng-if="referExplainCtrl.globalParam.flag.showExplain">
+    <div tabindex="-1" class="modal fade" id="explain-dialog" data-backdrop="static"aria-hidden="true">
+        <ng-include src="'view/explain/explainModal.html'" ng-controller="explainModalController as explainModalCtrl"></ng-include>
+    </div>
+</div>
+
+<!--解説の編集-->
+<div ng-if="referExplainCtrl.globalParam.flag.detailExplain">
+    <div tabindex="-1" class="modal fade" id="detail-dialog" data-backdrop="static"aria-hidden="true">
+    	<div class="modal-dialog" style="width:70%;height:85%;overflow:auto;">
+    		<div class="modal-content">
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button" ng-click="referExplainCtrl.method.clickDetailFinish();"style="margin-right:5px;">×</button>
+                <div class="modal-body">
+                    <div ng-include="'view/explain/explainForm.html'"ng-controller="explainFormController as explainFormCtrl"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--プレビュー-->
+<div ng-if="referExplainCtrl.globalParam.flag.previewExplain">
+    <div tabindex="-1" class="modal fade" id="preview-dialog" data-backdrop="static"aria-hidden="true">
+        <ng-include src="'view/explain/showExplain.html'" ng-controller="explainModalController as explainModalCtrl"></ng-include>
+    </div>
+</div>
+
+<!--削除確認画面-->
+<div tabindex="-1" class="modal fade" id="delete-dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="pmd-card-title-text">本当に削除しますか</h2>
+			</div>
+			<div class="modal-body">
+				<p>{{referExplainCtrl.value.openExplain.title}}</p>
+			</div>
+			<div class="pmd-modal-action pmd-modal-bordered text-right">
+				<button data-dismiss="modal" ng-click="referExplainCtrl.method.deleteExplain();"class="btn pmd-btn-flat pmd-ripple-effect btn-primary" type="button">はい</button>
+				<button data-dismiss="modal" type="button" class="btn pmd-btn-flat pmd-ripple-effect btn-default">いいえ</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--編集確認画面-->
+<div tabindex="-1" class="modal fade" id="submitComfirm-dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+            <!--アラート表示-->
+            <div class="common-inputAlert" ng-show="explainFormCtrl.value.flag.alert" ng-controller="explainFormController as explainFormCtrl">
+                <div class="alert alert-danger" style="width:98%;"role="alert" ng-repeat="alert in explainFormCtrl.value.alert">
+                    {{alert}}
+                </div>
+            </div>
+			<div class="modal-header">
+				<h2 class="pmd-card-title-text">編集完了確認</h2>
+			</div>
+			<div class="modal-body">
+				<p>編集を終了しますか</p>
+			</div>
+			<div class="pmd-modal-action pmd-modal-bordered text-right">
+				<button ng-click="referExplainCtrl.method.clickComp();"data-dismiss="modal" class="btn pmd-btn-flat pmd-ripple-effect btn-primary" type="button">はい</button>
+				<button data-dismiss="modal" type="button" data-target="#detail-dialog" data-toggle="modal"class="btn pmd-btn-flat pmd-ripple-effect btn-default">いいえ</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--解説の評価画面-->
+<div tabindex="-1" class="modal fade" id="evalute-dialog" aria-hidden="true">
+    <ng-include src="'view/common/contentEvalute.html'" ng-controller="contentEvaluteController as contentEvaluteCtrl"></ng-include>
+</div>
+
+<style>
+.pmd-radio input{
+    display: initial;
+    margin: 0px;
+    position: inherit;
+}
+.radio-inline{
+    vertical-align: baseline;
+    font-size: 13px;
+}
+.modal .radio {
+    margin: 16px 10px;
+}
+
+.radio label{
+    margin-left:10px;
+}

@@ -1,0 +1,137 @@
+body{
+    margin:0;
+    color:#494949;
+    font-size: 17px;
+    background-color: #f2f2f2;
+    letter-spacing: 0.7px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+}
+
+/*ヘッダー*/
+.mdl-layout__header{
+    background-color: #fff;
+    color: #494949;
+}
+
+.mdl-layout-title img{
+    width: 170px;
+}
+
+.mdl-layout__header-row .mdl-navigation__link,
+.mdl-layout__header .mdl-layout__drawer-button{
+    color: #494949;
+}
+
+.mdl-layout__drawer{
+    background-color: #fff;
+    color: #494949;
+}
+
+/*メニュー*/
+.menu{
+    top:50px;
+    width: 20%;
+    margin-left: 15px;
+    background-color: #fff;
+    position: absolute;
+}
+.menu h1{
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #4790BB;
+    padding: 8px 15px;
+    text-align: center;
+    margin: 0;
+}
+
+.menu h1:before{
+    content: "\f0c9";
+    color: #fff;
+    font-family: FontAwesome;
+    padding-right: 10px;
+}
+.menu ul{
+    padding: 10px;
+}
+.menu li{
+    display: inline;
+}
+.menu li a{
+    display: block;
+	color: #494949;
+	font-size: 13px;
+	line-height: 35px;
+	font-weight: bold;
+}
+.menu li a:before{
+    content: "\f0da";
+    color: #4790BB;
+    font-family: FontAwesome;
+    padding-right: 20px;
+    margin-left: 20px;
+
+}
+.menu li a:hover{
+    cursor:pointer;
+    color: #4790BB;
+    transition-property:all;
+    transition: 0.2s linear;
+}
+
+/*メインフレーム*/
+.mainContents {
+    position: absolute;
+    top: 50px;
+    width: calc(76% - 20px);
+    margin-left: 24%;
+}
+.mdl-layout__content{
+    z-index: initial;
+}
+
+.mainSection{
+    padding: 0 0 10px 0;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    margin-right: 20px;
+    min-height: 100%;
+}
+.mainSectionTitle{
+    font-size: 14px;
+    padding: 4px 0px 0.5px 15px;
+	border-left: 7px solid #4790bb;
+	border-bottom: 2px solid #eee;
+}
+.mainSectionTitle a{
+    color: #494949;
+    font-size: 23px;
+}
+.mainSectionTitle a:hover{
+    cursor: pointer;
+    color: #4790BB;
+    transition-property:all;
+    transition: 0.2s linear;
+}
+
+.header-login .login{
+    text-decoration:none;
+    color:#1D3557;
+    margin-right: 10px;
+}
+.header-login .login:hover{
+    cursor:pointer;
+    color: #4790BB;
+    transition-property:all;
+    transition: 0.2s linear;
+    border-bottom: 1px;
+}
+
+@media print{
+    body{
+        background-color: #ffffff;
+    }
+    .header{display:none;}
+}

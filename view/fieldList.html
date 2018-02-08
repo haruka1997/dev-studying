@@ -1,0 +1,343 @@
+<div>
+    <div>
+        <div ng-if=fieldListCtrl.value.menu=='システムアーキテクト'>
+            <ul class="fieldList-menu"id="sa" role="tab">
+                <li class="collapsed" href="#/main#field1" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field1"  data-expandable="false"><a>{{fieldListCtrl.value.key[0]}}</a></li>
+                    <ul id="field1"class="panel-collapse collapse" role="tabpanel" aria-labelledby="sa"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[0]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+            </ul>
+        </div>
+
+        <div ng-if=fieldListCtrl.value.menu=='ネットワーク論'>
+            <ul class="fieldList-menu"id="network" role="tab">
+                <li class="collapsed" href="#/main#field1" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field1"  data-expandable="false"><a>{{fieldListCtrl.value.key[0]}}</a></li>
+                    <ul id="field1"class="panel-collapse collapse" role="tabpanel" aria-labelledby="network"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[0]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field2" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field2"  data-expandable="false"><a>{{fieldListCtrl.value.key[1]}}</a></li>
+                    <ul id="field2"class="panel-collapse collapse" role="tabpanel" aria-labelledby="network"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[1]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field3" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field3"  data-expandable="false"><a>{{fieldListCtrl.value.key[2]}}</a></li>
+                    <ul id="field3"class="panel-collapse collapse" role="tabpanel" aria-labelledby="network"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[2]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field4" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field4"  data-expandable="false"><a>{{fieldListCtrl.value.key[3]}}</a></li>
+                    <ul id="field4"class="panel-collapse collapse" role="tabpanel" aria-labelledby="network"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[3]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field5" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field5"  data-expandable="false"><a>{{fieldListCtrl.value.key[4]}}</a></li>
+                    <ul id="field5"class="panel-collapse collapse" role="tabpanel" aria-labelledby="network"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[4]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field6" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field6"  data-expandable="false"><a>{{fieldListCtrl.value.key[5]}}</a></li>
+                    <ul id="field6"class="panel-collapse collapse" role="tabpanel" aria-labelledby="network"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[5]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field7" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field7"  data-expandable="false"><a>{{fieldListCtrl.value.key[6]}}</a></li>
+                    <ul id="field7"class="panel-collapse collapse" role="tabpanel" aria-labelledby="network"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[6]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field8" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field8"  data-expandable="false"><a>{{fieldListCtrl.value.key[7]}}</a></li>
+                    <ul id="field8"class="panel-collapse collapse" role="tabpanel" aria-labelledby="network"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[7]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field9" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field9"  data-expandable="false"><a>{{fieldListCtrl.value.key[8]}}</a></li>
+                    <ul id="field9"class="panel-collapse collapse" role="tabpanel" aria-labelledby="network"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[8]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field10" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field10"  data-expandable="false"><a>{{fieldListCtrl.value.key[9]}}</a></li>
+                    <ul id="field10"class="panel-collapse collapse" role="tabpanel" aria-labelledby="network"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[9]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field11" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field11"  data-expandable="false"><a>{{fieldListCtrl.value.key[10]}}</a></li>
+                    <ul id="field11"class="panel-collapse collapse" role="tabpanel" aria-labelledby="network"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[10]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field12" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field12"  data-expandable="false"><a>{{fieldListCtrl.value.key[11]}}</a></li>
+                    <ul id="field12"class="panel-collapse collapse" role="tabpanel" aria-labelledby="network"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[11]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+            </ul>
+        </div>
+
+        <div ng-if=fieldListCtrl.value.menu=='モデリング実践論'>
+            <ul class="fieldList-menu"id="modeling" role="tab">
+                <li class="collapsed" href="#/main#field1" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field1"  data-expandable="false"><a>{{fieldListCtrl.value.key[0]}}</a></li>
+                    <ul id="field1"class="panel-collapse collapse" role="tabpanel" aria-labelledby="modeling"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[0]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field2" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field2"  data-expandable="false"><a>{{fieldListCtrl.value.key[1]}}</a></li>
+                    <ul id="field2"class="panel-collapse collapse" role="tabpanel" aria-labelledby="modeling"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[1]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field3" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field3"  data-expandable="false"><a>{{fieldListCtrl.value.key[2]}}</a></li>
+                    <ul id="field3"class="panel-collapse collapse" role="tabpanel" aria-labelledby="modeling"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[2]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field4" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field4"  data-expandable="false"><a>{{fieldListCtrl.value.key[3]}}</a></li>
+                    <ul id="field4"class="panel-collapse collapse" role="tabpanel" aria-labelledby="modeling"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[3]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field5" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field5"  data-expandable="false"><a>{{fieldListCtrl.value.key[4]}}</a></li>
+                    <ul id="field5"class="panel-collapse collapse" role="tabpanel" aria-labelledby="modeling"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[4]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field6" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field6"  data-expandable="false"><a>{{fieldListCtrl.value.key[5]}}</a></li>
+                    <ul id="field6"class="panel-collapse collapse" role="tabpanel" aria-labelledby="modeling"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[5]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field7" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field7"  data-expandable="false"><a>{{fieldListCtrl.value.key[6]}}</a></li>
+                    <ul id="field7"class="panel-collapse collapse" role="tabpanel" aria-labelledby="modeling"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[6]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field8" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field8"  data-expandable="false"><a>{{fieldListCtrl.value.key[7]}}</a></li>
+                    <ul id="field8"class="panel-collapse collapse" role="tabpanel" aria-labelledby="modeling"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[7]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field9" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field9"  data-expandable="false"><a>{{fieldListCtrl.value.key[8]}}</a></li>
+                    <ul id="field9"class="panel-collapse collapse" role="tabpanel" aria-labelledby="modeling"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[8]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field10" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field10"  data-expandable="false"><a>{{fieldListCtrl.value.key[9]}}</a></li>
+                    <ul id="field10"class="panel-collapse collapse" role="tabpanel" aria-labelledby="modeling"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[9]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field11" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field11"  data-expandable="false"><a>{{fieldListCtrl.value.key[10]}}</a></li>
+                    <ul id="field11"class="panel-collapse collapse" role="tabpanel" aria-labelledby="modeling"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[10]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+            </ul>
+        </div>
+
+        <div ng-if=fieldListCtrl.value.menu=='ソフトウェア設計学'>
+            <ul class="fieldList-menu"id="software" role="tab">
+                <li class="collapsed" href="#/main#field1" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field1"  data-expandable="false"><a>{{fieldListCtrl.value.key[0]}}</a></li>
+                    <ul id="field1"class="panel-collapse collapse" role="tabpanel" aria-labelledby="software"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[0]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field2" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field2"  data-expandable="false"><a>{{fieldListCtrl.value.key[1]}}</a></li>
+                    <ul id="field2"class="panel-collapse collapse" role="tabpanel" aria-labelledby="software"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[1]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field3" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field3"  data-expandable="false"><a>{{fieldListCtrl.value.key[2]}}</a></li>
+                    <ul id="field3"class="panel-collapse collapse" role="tabpanel" aria-labelledby="software"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[2]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field4" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field4"  data-expandable="false"><a>{{fieldListCtrl.value.key[3]}}</a></li>
+                    <ul id="field4"class="panel-collapse collapse" role="tabpanel" aria-labelledby="software"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[3]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field5" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field5"  data-expandable="false"><a>{{fieldListCtrl.value.key[4]}}</a></li>
+                    <ul id="field5"class="panel-collapse collapse" role="tabpanel" aria-labelledby="software"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[4]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field6" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field6"  data-expandable="false"><a>{{fieldListCtrl.value.key[5]}}</a></li>
+                    <ul id="field6"class="panel-collapse collapse" role="tabpanel" aria-labelledby="software"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[5]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field7" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field7"  data-expandable="false"><a>{{fieldListCtrl.value.key[6]}}</a></li>
+                    <ul id="field7"class="panel-collapse collapse" role="tabpanel" aria-labelledby="software"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[6]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field8" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field8"  data-expandable="false"><a>{{fieldListCtrl.value.key[7]}}</a></li>
+                    <ul id="field8"class="panel-collapse collapse" role="tabpanel" aria-labelledby="software"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[7]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field9" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field9"  data-expandable="false"><a>{{fieldListCtrl.value.key[8]}}</a></li>
+                    <ul id="field9"class="panel-collapse collapse" role="tabpanel" aria-labelledby="software"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[8]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field10" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field10"  data-expandable="false"><a>{{fieldListCtrl.value.key[9]}}</a></li>
+                    <ul id="field10"class="panel-collapse collapse" role="tabpanel" aria-labelledby="software"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[9]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field11" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field11"  data-expandable="false"><a>{{fieldListCtrl.value.key[10]}}</a></li>
+                    <ul id="field11"class="panel-collapse collapse" role="tabpanel" aria-labelledby="software"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[10]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field12" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field12"  data-expandable="false"><a>{{fieldListCtrl.value.key[11]}}</a></li>
+                    <ul id="field12"class="panel-collapse collapse" role="tabpanel" aria-labelledby="software"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[11]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field13" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field13"  data-expandable="false"><a>{{fieldListCtrl.value.key[12]}}</a></li>
+                    <ul id="field13"class="panel-collapse collapse" role="tabpanel" aria-labelledby="software"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[12]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+            </ul>
+        </div>
+
+        <div ng-if=fieldListCtrl.value.menu=='ファイルとデータベース'>
+            <ul class="fieldList-menu"id="fileAndDb" role="tab">
+                <li class="collapsed" href="#/main#field1" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field1"  data-expandable="false"><a>{{fieldListCtrl.value.key[0]}}</a></li>
+                    <ul id="field1"class="panel-collapse collapse" role="tabpanel" aria-labelledby="fileAndDb"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[0]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field2" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field2"  data-expandable="false"><a>{{fieldListCtrl.value.key[1]}}</a></li>
+                    <ul id="field2"class="panel-collapse collapse" role="tabpanel" aria-labelledby="fileAndDb"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[1]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field3" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field3"  data-expandable="false"><a>{{fieldListCtrl.value.key[2]}}</a></li>
+                    <ul id="field3"class="panel-collapse collapse" role="tabpanel" aria-labelledby="fileAndDb"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[2]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field4" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field4"  data-expandable="false"><a>{{fieldListCtrl.value.key[3]}}</a></li>
+                    <ul id="field4"class="panel-collapse collapse" role="tabpanel" aria-labelledby="fileAndDb"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[3]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field5" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field5"  data-expandable="false"><a>{{fieldListCtrl.value.key[4]}}</a></li>
+                    <ul id="field5"class="panel-collapse collapse" role="tabpanel" aria-labelledby="fileAndDb"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[4]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field6" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field6"  data-expandable="false"><a>{{fieldListCtrl.value.key[5]}}</a></li>
+                    <ul id="field6"class="panel-collapse collapse" role="tabpanel" aria-labelledby="fileAndDb"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[5]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field7" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field7"  data-expandable="false"><a>{{fieldListCtrl.value.key[6]}}</a></li>
+                    <ul id="field7"class="panel-collapse collapse" role="tabpanel" aria-labelledby="fileAndDb"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[6]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field8" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field8"  data-expandable="false"><a>{{fieldListCtrl.value.key[7]}}</a></li>
+                    <ul id="field8"class="panel-collapse collapse" role="tabpanel" aria-labelledby="fileAndDb"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[7]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field9" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field9"  data-expandable="false"><a>{{fieldListCtrl.value.key[8]}}</a></li>
+                    <ul id="field9"class="panel-collapse collapse" role="tabpanel" aria-labelledby="fileAndDb"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[8]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field10" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field10"  data-expandable="false"><a>{{fieldListCtrl.value.key[9]}}</a></li>
+                    <ul id="field10"class="panel-collapse collapse" role="tabpanel" aria-labelledby="fileAndDb"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[9]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field11" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field11"  data-expandable="false"><a>{{fieldListCtrl.value.key[10]}}</a></li>
+                    <ul id="field11"class="panel-collapse collapse" role="tabpanel" aria-labelledby="fileAndDb"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[10]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+            </ul>
+        </div>
+
+        <div ng-if=fieldListCtrl.value.menu=='数論と代数'>
+            <ul class="fieldList-menu"id="suuron" role="tab">
+                <li class="collapsed" href="#/main#field1" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field1"  data-expandable="false"><a>{{fieldListCtrl.value.key[0]}}</a></li>
+                    <ul id="field1"class="panel-collapse collapse" role="tabpanel" aria-labelledby="suuron"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[0]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field2" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field2"  data-expandable="false"><a>{{fieldListCtrl.value.key[1]}}</a></li>
+                    <ul id="field2"class="panel-collapse collapse" role="tabpanel" aria-labelledby="suuron"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[1]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field3" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field3"  data-expandable="false"><a>{{fieldListCtrl.value.key[2]}}</a></li>
+                    <ul id="field3"class="panel-collapse collapse" role="tabpanel" aria-labelledby="suuron"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[2]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field4" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field4"  data-expandable="false"><a>{{fieldListCtrl.value.key[3]}}</a></li>
+                    <ul id="field4"class="panel-collapse collapse" role="tabpanel" aria-labelledby="suuron"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[3]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field5" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field5"  data-expandable="false"><a>{{fieldListCtrl.value.key[4]}}</a></li>
+                    <ul id="field5"class="panel-collapse collapse" role="tabpanel" aria-labelledby="suuron"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[4]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field6" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field6"  data-expandable="false"><a>{{fieldListCtrl.value.key[5]}}</a></li>
+                    <ul id="field6"class="panel-collapse collapse" role="tabpanel" aria-labelledby="suuron"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[5]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field7" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field7"  data-expandable="false"><a>{{fieldListCtrl.value.key[6]}}</a></li>
+                    <ul id="field7"class="panel-collapse collapse" role="tabpanel" aria-labelledby="suuron"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[6]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field8" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field8"  data-expandable="false"><a>{{fieldListCtrl.value.key[7]}}</a></li>
+                    <ul id="field8"class="panel-collapse collapse" role="tabpanel" aria-labelledby="suuron"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[7]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field9" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field9"  data-expandable="false"><a>{{fieldListCtrl.value.key[8]}}</a></li>
+                    <ul id="field9"class="panel-collapse collapse" role="tabpanel" aria-labelledby="suuron"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[8]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field10" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field10"  data-expandable="false"><a>{{fieldListCtrl.value.key[9]}}</a></li>
+                    <ul id="field10"class="panel-collapse collapse" role="tabpanel" aria-labelledby="suuron"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[9]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field11" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field11"  data-expandable="false"><a>{{fieldListCtrl.value.key[10]}}</a></li>
+                    <ul id="field11"class="panel-collapse collapse" role="tabpanel" aria-labelledby="suuron"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[10]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+            </ul>
+        </div>
+
+        <div ng-if=fieldListCtrl.value.menu=='アルゴリズム論'>
+            <ul class="fieldList-menu"id="algorithm" role="tab">
+                <li class="collapsed" href="#/main#field1" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field1"  data-expandable="false"><a>{{fieldListCtrl.value.key[0]}}</a></li>
+                    <ul id="field1"class="panel-collapse collapse" role="tabpanel" aria-labelledby="algorithm"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[0]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field2" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field2"  data-expandable="false"><a>{{fieldListCtrl.value.key[1]}}</a></li>
+                    <ul id="field2"class="panel-collapse collapse" role="tabpanel" aria-labelledby="algorithm"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[1]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field3" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field3"  data-expandable="false"><a>{{fieldListCtrl.value.key[2]}}</a></li>
+                    <ul id="field3"class="panel-collapse collapse" role="tabpanel" aria-labelledby="algorithm"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[2]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field4" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field4"  data-expandable="false"><a>{{fieldListCtrl.value.key[3]}}</a></li>
+                    <ul id="field4"class="panel-collapse collapse" role="tabpanel" aria-labelledby="algorithm"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[3]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field5" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field5"  data-expandable="false"><a>{{fieldListCtrl.value.key[4]}}</a></li>
+                    <ul id="field5"class="panel-collapse collapse" role="tabpanel" aria-labelledby="algorithm"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[4]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field6" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field6"  data-expandable="false"><a>{{fieldListCtrl.value.key[5]}}</a></li>
+                    <ul id="field6"class="panel-collapse collapse" role="tabpanel" aria-labelledby="algorithm"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[5]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field7" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field7"  data-expandable="false"><a>{{fieldListCtrl.value.key[6]}}</a></li>
+                    <ul id="field7"class="panel-collapse collapse" role="tabpanel" aria-labelledby="algorithm"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[6]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field8" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field8"  data-expandable="false"><a>{{fieldListCtrl.value.key[7]}}</a></li>
+                    <ul id="field8"class="panel-collapse collapse" role="tabpanel" aria-labelledby="algorithm"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[7]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field9" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field9"  data-expandable="false"><a>{{fieldListCtrl.value.key[8]}}</a></li>
+                    <ul id="field9"class="panel-collapse collapse" role="tabpanel" aria-labelledby="algorithm"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[8]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field10" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field10"  data-expandable="false"><a>{{fieldListCtrl.value.key[9]}}</a></li>
+                    <ul id="field10"class="panel-collapse collapse" role="tabpanel" aria-labelledby="algorithm"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[9]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field11" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field11"  data-expandable="false"><a>{{fieldListCtrl.value.key[10]}}</a></li>
+                    <ul id="field11"class="panel-collapse collapse" role="tabpanel" aria-labelledby="algorithm"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[10]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+            </ul>
+        </div>
+
+        <div ng-if=fieldListCtrl.value.menu=='情報システム構築学Ⅰ'>
+            <ul class="fieldList-menu"id="construction" role="tab">
+                <li class="collapsed" href="#/main#field1" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field1"  data-expandable="false"><a>{{fieldListCtrl.value.key[0]}}</a></li>
+                    <ul id="field1"class="panel-collapse collapse" role="tabpanel" aria-labelledby="construction"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[0]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field2" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field2"  data-expandable="false"><a>{{fieldListCtrl.value.key[1]}}</a></li>
+                    <ul id="field2"class="panel-collapse collapse" role="tabpanel" aria-labelledby="construction"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[1]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field3" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field3"  data-expandable="false"><a>{{fieldListCtrl.value.key[2]}}</a></li>
+                    <ul id="field3"class="panel-collapse collapse" role="tabpanel" aria-labelledby="construction"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[2]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field4" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field4"  data-expandable="false"><a>{{fieldListCtrl.value.key[3]}}</a></li>
+                    <ul id="field4"class="panel-collapse collapse" role="tabpanel" aria-labelledby="construction"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[3]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+                <li class="collapsed" href="#/main#field5" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="field5"  data-expandable="false"><a>{{fieldListCtrl.value.key[4]}}</a></li>
+                    <ul id="field5"class="panel-collapse collapse" role="tabpanel" aria-labelledby="construction"　aria-expanded="true">
+                        <li ng-repeat="field in fieldListCtrl.value.items[fieldListCtrl.value.key[4]].items"><a ng-click="fieldListCtrl.method.clickField(field.name,10);">{{field.name}}</a></li>
+                    </ul>
+            </ul>
+        </div>
+    </div>
+</div>

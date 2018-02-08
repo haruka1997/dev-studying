@@ -1,0 +1,33 @@
+<div class="modal-dialog modal-lg" style="width:80%;">
+    <div class="modal-content">
+        <div class="modal-header pmd-modal-bordered">
+            <button title="閉じる"aria-hidden="true" ng-click="explainModalCtrl.method.clickFinishButton();"data-dismiss="modal"class="close" type="button">×</button>
+            <div class="explain-modal-header-icon" ng-if="!explainModalCtrl.value.flag.previewUser">
+                <i title="コメント表示"class="material-icons md-dark pmd-sm" aria-hidden="true" ng-click="explainModalCtrl.method.clickCommentButton();">chat</i>
+                <i title="印刷"class="material-icons md-dark pmd-sm" aria-hidden="true" ng-click="explainModalCtrl.method.clickPrintButton();">print</i>
+                <i title="編集"class="material-icons md-dark pmd-sm" data-dismiss="modal"ng-click="explainModalCtrl.method.clickEditButton();"data-target="#detail-dialog" data-toggle="modal" aria-hidden="true" ng-if="explainModalCtrl.value.flag.sameUser">create</i>
+                <i title="削除"class="material-icons md-dark pmd-sm" data-dismiss="modal" ng-click="explainModalCtrl.method.clickDeleteButton();"data-target="#delete-dialog" data-toggle="modal" aria-hidden="true"style="width:24px;" ng-if="explainModalCtrl.value.flag.sameUser">delete forever</i>
+            </div>
+            <h2 class="pmd-card-title-text" ng-bind="explainModalCtrl.value.showExplain.title"></h2>
+        </div>
+        <!--コメント-->
+        <aside class="explainModal-comment" id="comment">
+            <!--読み込み中-->
+            <div class="loading" ng-if="explainModalCtrl.value.flag.commentLoading">
+                <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+            </div>
+            <ul class="list-group pmd-list pmd-card-list" ng-if="!explainModalCtrl.value.flag.commentLoading" style="padding:.3em;">
+                <li class="list-group-item" ng-repeat="comment in explainModalCtrl.value.comments">
+                   <h3 class="list-group-item-heading">{{comment.comment}}</h3>
+                   <span class="list-group-item-text">{{comment.insertTime | date: 'yyyy/MM/dd'}}</span>
+                </li>
+            </ul>
+        </aside>
+        <p ng-bind-html="explainModalCtrl.value.explainContent" class="common-explain-content" id="content"></p>
+        <div class="pmd-modal-action text-right pmd-modal-bordered">
+            <button data-dismiss="modal" data-target="#evalute-dialog" data-toggle="modal" class="btn pmd-ripple-effect btn-primary pmd-btn-flat" type="button"ng-if="!explainModalCtrl.value.flag.sameUser && !explainModalCtrl.value.flag.previewUser"style="margin-left:10px;">終了</button>
+            <button ng-if="explainModalCtrl.globalParam.flag.previewExplain" ng-click="explainModalCtrl.method.clickPreviewComp();"data-dismiss="modal" data-target="#detail-dialog" data-toggle="modal" class="btn pmd-ripple-effect btn-primary pmd-btn-flat" type="button"style="margin-left:10px;">完了</button>
+        </div>
+    </div>
+</div>

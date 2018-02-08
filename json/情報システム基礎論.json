@@ -1,0 +1,60 @@
+{
+	"システムズ・アプローチの基礎":{
+        "flag": true,
+        "items":[
+            {"name":"システム思考",
+             "flag":true
+            },
+    		{"name":"システム認識",
+             "flag":true
+            },
+    		{"name":"フィードバック",
+             "flag":true
+            },
+    		{"name":"システム分析",
+             "flag":true
+            },
+    	    {"name":"システム方法論",
+             "flag":true
+            }
+     	]
+    },
+    "情報システムの歴史":{
+        "flag": true,
+        "items":[
+            {"name":"情報システムの登場・発展",
+             "flag":true
+            }
+     	]
+    },
+    "情報システムの評価":{
+        "flag": true,
+        "items":[
+            {"name":"経済・社会システムの評価",
+             "flag":true
+            }
+     	]
+    },
+    "情報システムの開発":{
+        "flag": true,
+        "items":[
+            {"name":"ウォータフォールモデル",
+             "flag":true
+            },
+            {"name":"プロトタイプモデル",
+             "flag":true
+            }
+     	]
+    },
+    "情報システムの組織的役割":{
+        "flag": true,
+        "items":[
+            {"name":"組織と情報システム",
+             "flag":true
+            },
+            {"name":"情報システムマネジメント",
+             "flag":true
+            }
+     	]
+    }
+}

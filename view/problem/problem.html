@@ -1,0 +1,91 @@
+<!--問題リスト表示-->
+<div ng-if="problemCtrl.globalParam.flag.problemList">
+    <div class="list">
+        <ng-include src="'view/problem/problemList.html'" ng-controller="problemListController as problemListCtrl"></ng-include>
+    </div>
+</div>
+
+<!--loading-->
+<div class="loading" ng-if="problemCtrl.globalParam.flag.problemListLoading">
+  <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+  <span class="sr-only">Loading...</span>
+</div>
+
+<!--問題表示-->
+<div ng-if="problemCtrl.globalParam.flag.showProblem">
+    <div tabindex="-1" class="modal fade" id="problem-dialog" aria-hidden="true" >
+        <ng-include src="'view/problem/showProblem.html'" ng-controller="showProblemController as showProblemCtrl"></ng-include>
+    </div>
+</div>
+
+<!--問題の編集-->
+<div ng-if="problemCtrl.globalParam.flag.detailProblem">
+    <div tabindex="-1" class="modal fade" id="detail-dialog" data-backdrop="static"aria-hidden="true">
+    	<div class="modal-dialog" style="width:70%;height:85%;overflow:auto;">
+    		<div class="modal-content">
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button" ng-click="explainCtrl.method.clickDetailFinish();"style="margin-right:5px;">×</button>
+                <div class="modal-body">
+                    <ng-include src="'view/problem/problemForm.html'" ng-controller="problemFormController as problemFormCtrl"></ng-include>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--問題プレビュー表示-->
+<div ng-if="problemCtrl.globalParam.flag.previewProblem">
+    <div tabindex="-1" class="modal fade" id="preview-dialog" aria-hidden="true" >
+        <ng-include src="'view/problem/showProblem.html'" ng-controller="showProblemController as showProblemCtrl"></ng-include>
+    </div>
+</div>
+
+<!--編集確認画面-->
+<div tabindex="-1" class="modal fade" id="submitComfirm-dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="pmd-card-title-text">編集完了確認</h2>
+			</div>
+			<div class="modal-body">
+				<p>編集を終了しますか</p>
+			</div>
+			<div class="pmd-modal-action pmd-modal-bordered text-right">
+				<button data-dismiss="modal" ng-click="problemCtrl.method.clickComp();" class="btn pmd-btn-flat pmd-ripple-effect btn-primary" type="button">はい</button>
+				<button data-dismiss="modal" type="button" data-target="#detail-dialog" data-toggle="modal"class="btn pmd-btn-flat pmd-ripple-effect btn-default">いいえ</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--削除確認画面-->
+<div tabindex="-1" class="modal fade" id="delete-dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="pmd-card-title-text">本当に削除しますか</h2>
+			</div>
+			<div class="pmd-modal-action pmd-modal-bordered text-right">
+				<button data-dismiss="modal" ng-click="problemCtrl.method.deleteProblem();"class="btn pmd-btn-flat pmd-ripple-effect btn-primary" type="button">はい</button>
+				<button data-dismiss="modal" ng-click="problemCtrl.globalParam.flag.showProblem = false;"type="button" class="btn pmd-btn-flat pmd-ripple-effect btn-default">いいえ</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+
+.radio-inline{
+    vertical-align: baseline;
+    font-size: 13px;
+}
+
+.explain-modal-header-icon{
+    float:right;
+    margin-right:25px;
+    margin-top:-3px;
+}
+.explain-modal-header-icon i{
+    padding-left: .3em;
+    cursor: pointer;
+}

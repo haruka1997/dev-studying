@@ -1,0 +1,67 @@
+<!--メニューバー-->
+<div class="print-noPrintArea">
+    <div class="print-menu">
+        <ul>
+            <li><button type="button" class="btn btn-default" ng-click="problemPrintCtrl.method.clickMenu('problem');"> 問題 </button ></li>
+            <li><button type="button" class="btn btn-default"ng-click="problemPrintCtrl.method.clickMenu('answer');"> 解答と解説 </button ></li>
+        </ul>
+    </div>
+
+    <div class="print-btn">
+        <button type="button" class="btn btn-primary" data-dismiss="modal"data-target="#preview-dialog" data-toggle="modal" ng-click="problemPrintCtrl.method.clickPrint();"><i class="fa fa-caret-right"></i> 印刷 </button >
+    </div>
+</div>
+
+<!-- 印刷プレビュー -->
+<div class="print-printArea">
+    <div class="pmd-card pmd-card-default pmd-z-depth pmd-card-custom-form">
+    <div class="pmd-card-title">
+        <h2 class="pmd-card-title-text"style="margin-left: 0px;">{{problemPrintCtrl.value.title}}</h2>
+        <span class="pmd-card-subtitle-text">{{problemPrintCtrl.value.content[0].menu}}</span>
+    </div>
+    </div>
+    <div class="pmd-card pmd-card-default pmd-z-depth pmd-card-custom-form" ng-if="problemPrintCtrl.value.flag.problem" ng-repeat="problem in problemPrintCtrl.value.content">
+        <div class="pmd-card-title">
+            <label>問. {{problem.No}}</label>
+            <p class="pmd-card-title-text" ng-bind-html="problem.sceProblem"></p>
+            <div class="print-formatChoose" ng-show="problem.format == '選択肢'">
+                <p class="pmd-card-title-text">①　{{problem.choiceNo[0]}}</p>
+                <p class="pmd-card-title-text">②　{{problem.choiceNo[1]}}</p>
+                <p class="pmd-card-title-text">③　{{problem.choiceNo[2]}}</p>
+                <p class="pmd-card-title-text">④　{{problem.choiceNo[3]}}</p>
+                <div class="print-answerBox"></div>
+            </div>
+            <div class="print-formatWrite" ng-show="problem.format == '書き取り'">
+                <div class="print-answerBox"></div>
+            </div>
+            <div class="print-formatWrite" ng-show="problem.format == '論述'">
+                <div class="print-answerBox"></div>
+            </div>
+        </div>
+    </div>
+    <div class="pmd-card pmd-card-default pmd-z-depth pmd-card-custom-form" ng-if="problemPrintCtrl.value.flag.answer" ng-repeat="problem in problemPrintCtrl.value.content">
+        <div class="pmd-card-title">
+            <label>問. {{problem.No}}</label><br>
+            <label>【解答】</label>
+            <p class="pmd-card-title-text">{{problem.answer}}</p>
+            <label>【解説】</label>
+            <p class="pmd-card-title-text">{{problem.explain}}</p>
+        </div>
+    </div>
+</div>
+<style>
+.pmd-card-title {
+    border-bottom: none;
+    margin-bottom: 5px;
+    padding-top: 10px;
+}
+
+.pmd-card {
+    margin-bottom: 0px;
+}
+
+.pmd-card-title-text{
+    font-size: 13px;
+    padding: 0.5em;
+    margin-left: 10px;
+}

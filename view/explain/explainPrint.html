@@ -1,0 +1,58 @@
+<!--説明文表示-->
+<div class="explainPrint-styleAlert">
+    <div class="alert alert-info" role="alert" ng-if="explainPrintCtrl.value.flag.nomal">
+        スタイルなしのノーマルバージョンです。
+    </div>
+    <div class="alert alert-success" role="alert" ng-if="explainPrintCtrl.value.flag.note">
+        罫線のついたノートバージョンです。書き込みしやすいよう幅を広めにとってあります。
+    </div>
+    <div class="alert alert-warning" role="alert" ng-if="explainPrintCtrl.value.flag.remember">
+        赤い文字を穴抜きにしたテストバージョンです。
+    </div>
+</div>
+
+<div class="print-noPrintArea">
+    <div class="print-menu">
+        <ul>
+            <li><button type="button" class="btn btn-default" ng-click="explainPrintCtrl.method.clickMenu('nomal');"> ノーマル </button ></li>
+            <li><button type="button" class="btn btn-default"ng-click="explainPrintCtrl.method.clickMenu('note');"> ノート </button ></li>
+            <li><button type="button" class="btn btn-default"ng-click="explainPrintCtrl.method.clickMenu('remember');"> テスト </button ></li>
+        </ul>
+    </div>
+    <div class="print-btn">
+        <button type="button" class="btn btn-primary" data-dismiss="modal"data-target="#preview-dialog" data-toggle="modal" ng-click="explainPrintCtrl.method.clickPrint();"><i class="fa fa-caret-right"></i> 印刷 </button >
+    </div>
+</div>
+
+<!-- Card header -->
+<div class="print-printArea">
+    <div class="pmd-card pmd-card-default pmd-z-depth pmd-card-custom-form" ng-if="explainPrintCtrl.value.flag.nomal">
+        <div class="pmd-card-title">
+            <h2 class="pmd-card-title-text">{{explainPrintCtrl.value.content.title}}</h2>
+        </div>
+        <div class="pmd-card-body"ng-bind-html="explainPrintCtrl.value.content.sceContent"></div>
+    </div>
+
+    <div class="pmd-card pmd-card-default pmd-z-depth pmd-card-custom-form" ng-if="explainPrintCtrl.value.flag.note">
+        <div class="pmd-card-title">
+            <h2 class="pmd-card-title-text">{{explainPrintCtrl.value.content.title}}</h2>
+        </div>
+        <div class="pmd-card-body"ng-bind-html="explainPrintCtrl.value.content.sceContent" id="note">
+        </div>
+    </div>
+    <div class="pmd-card pmd-card-default pmd-z-depth pmd-card-custom-form" ng-if="explainPrintCtrl.value.flag.remember">
+        <div class="pmd-card-title">
+            <h2 class="pmd-card-title-text">{{explainPrintCtrl.value.content.title}}</h2>
+        </div>
+        <div class="pmd-card-body"ng-bind-html="explainPrintCtrl.value.content.sceRememberContent" id="test">
+    </div>
+</div>
+
+<style>
+.pmd-card-title{
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 16px;
+}
+.pmd-card-body{
+    padding-left:25px;
+}

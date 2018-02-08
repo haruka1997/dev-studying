@@ -1,0 +1,116 @@
+{
+	"整数論":{
+        "flag": true,
+        "items":[
+            {"name":"除法定理",
+             "flag":true
+             },
+             {"name":"約数・倍数",
+              "flag":true
+             },
+             {"name":"公約数",
+              "flag":true
+             },
+             {"name":"ユークリッドの互除法",
+              "flag":true
+             },
+             {"name":"最大公約数に関する諸性質",
+              "flag":true
+             }
+             ,{"name":"3つ以上の数の最大公約数",
+              "flag":true
+             },
+             {"name":"公倍数",
+              "flag":true
+             }
+     	]
+    },
+    "素数とその諸説":{
+        "flag": true,
+        "items":[
+            {"name":"基本概念",
+             "flag":true
+            },
+            {"name":"エラトステネスのふるい",
+             "flag":true
+            },
+            {"name":"素因数分解の一意性",
+             "flag":true
+            },
+            {"name":"標準分解",
+             "flag":true
+            }
+     	]
+    },
+    "合同式":{
+        "flag": true,
+        "items":[
+            {"name":"合同式の定義",
+             "flag":true
+            },
+            {"name":"合同式の性質",
+             "flag":true
+            },
+            {"name":"剰余系",
+             "flag":true
+            }
+     	]
+    },
+    "リレーショナル代数":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"正規化":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"データモデリング":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"スキーマ設計":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"SQL":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"トランザクションと同時実行制御":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"障害処理":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"先端データベース":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    }
+}

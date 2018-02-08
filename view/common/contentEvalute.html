@@ -1,0 +1,31 @@
+<div class="modal-dialog modal-sm" style="width:60%;">
+    <div class="modal-content">
+        <div class="modal-header pmd-modal-bordered">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+            <h2 class="pmd-card-title-text">評価</h2>
+        </div>
+        <div class="common-evalute-content">
+            <p>難易度</p>
+            <div class="radio">
+                <div class="radio">
+                  <label><input type="radio" name="dif_level" value="1"  id="radio01" ng-model="difficult">難しい</label>
+                  <label><input type="radio" name="dif_level" value="0" id="radio02" ng-model="difficult">普通</label>
+                  <label><input type="radio" name="dif_level" value="-1" id="radio03" ng-model="difficult">簡単</label>
+                </div>
+            </div>
+            <p>理解度</p>
+            <div class="radio">
+                <div class="radio">
+                  <label><input type="radio" name="und_level" value="1"  id="radio01" ng-model="understand">理解できた</label>
+                  <label><input type="radio" name="und_level" value="0" id="radio02" ng-model="understand">普通</label>
+                  <label><input type="radio" name="und_level" value="-1" id="radio03" ng-model="understand">理解できなかった</label>
+                </div>
+            </div>
+            <p style="padding:0.5em">・質問や感想があればお書きください</p>
+            <textarea cols="70" rows="4" placeholder="" ng-model="contentEvaluteCtrl.value.comment"></textarea>
+        </div>
+        <div class="pmd-modal-action text-right pmd-modal-bordered">
+            <button data-dismiss="modal"  class="btn pmd-ripple-effect btn-primary pmd-btn-flat" type="button"ng-click="contentEvaluteCtrl.method.clickFinishButton(difficult,understand);">終了</button>
+        </div>
+    </div>
+</div>

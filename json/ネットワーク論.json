@@ -1,0 +1,182 @@
+{
+    "期末テスト":{
+        "flag": true,
+        "items":[
+            {"name":"No1",
+             "flag":true
+            },
+             {"name":"No2",
+             "flag":true
+            }
+         ]
+    },"情報ネットワーク序論":{
+        "flag": true,
+        "items":[
+            {"name":"コンピュータネットワーク登場の背景",
+             "flag":true
+             },
+             {"name":"コンピュータとネットワーク発展の7つの段階",
+              "flag":true
+             },
+             {"name":"プロトコルとは",
+              "flag":true
+             },
+             {"name":"プロトコルは誰が決める?",
+               "flag":true
+             },
+             {"name":"プロトコルの階層化とOSI参照モデル",
+              "flag":true
+             },
+             {"name":"OSI参照モデルによる通信処理の例",
+               "flag":true
+             },
+             {"name":"通信方式の種類",
+              "flag":true
+             },
+             {"name":"アドレスとは",
+               "flag":true
+             },
+             {"name":"ネットワークの構成要素",
+              "flag":true
+             },
+             {"name":"現在のネットワークの姿",
+               "flag":true
+             }
+     	]
+    },
+    "TCP/IP基礎知識":{
+        "flag": true,
+        "items":[
+            {"name":"TCP/IP登場の背景とその歴史",
+             "flag":true
+            },
+            {"name":"TCP/IPの標準",
+             "flag":true
+            },
+            {"name":"インターネットの基礎知識",
+             "flag":true
+            },
+            {"name":"TCP/IPプロトコルの階層モデル",
+             "flag":true
+            },
+            {"name":"TCP/IPの階層モデルと通信例",
+             "flag":true
+            }
+     	]
+    },"データリンク層、MACアドレス、イーサネット":{
+        "flag": true,
+        "items":[
+            {"name":"データリンクの役割",
+             "flag":true
+            },
+            {"name":"データリンクの技術",
+             "flag":true
+            }
+     	]
+    },"無線通信、データリンク技術":{
+        "flag": true,
+        "items":[
+            {"name":"無線通信",
+             "flag":true
+            },
+            {"name":"PPP",
+             "flag":true
+            },
+            {"name":"その他のデータリンク",
+             "flag":true
+            },
+            {"name":"公衆アクセス網",
+             "flag":true
+            }
+     	]
+    },"ネットワーク層、IPアドレスとサブネットマスク":{
+        "flag": true,
+        "items":[
+            {"name":"IPの基礎知識",
+             "flag":true
+            },
+            {"name":"IPアドレスの基礎知識",
+             "flag":true
+            },
+            {"name":"その他のデータリンク",
+             "flag":true
+            },
+            {"name":"公衆アクセス網",
+             "flag":true
+            }
+     	]
+    },"経路制御、分割と再構築処理、IPv4とIPv6":{
+        "flag": true,
+        "items":[
+            {"name":"経路制御",
+             "flag":true
+            },
+            {"name":"IPの分割処理と再構築処理",
+             "flag":true
+            },
+            {"name":"IPv6",
+             "flag":true
+            },
+            {"name":"IPv4ヘッダ",
+             "flag":true
+            }
+     	]
+    },"IPに関する技術":{
+        "flag": true,
+        "items":[
+            {"name":"DNS",
+             "flag":true
+            },
+            {"name":"ARP",
+             "flag":true
+            },
+            {"name":"ICMP",
+             "flag":true
+            },
+            {"name":"DHCP",
+             "flag":true
+            },
+            {"name":"NAT",
+             "flag":true
+            },
+            {"name":"その他",
+             "flag":true
+            }
+     	]
+    },"トランスポート層、TCPとUDP":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    }," TCPに関する機能":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    }," 物理層からトランスポート層の機能":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    }," アプリケーション、セキュリティ":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    }," 情報ネットワークと社会":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    }
+}

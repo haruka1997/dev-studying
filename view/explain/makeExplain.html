@@ -1,0 +1,64 @@
+<!--ファイルアップロード-->
+<div style="margin:1em;">
+    <input type="file" file-model="img"　multiple="multiple">
+</div>
+
+<!-- 解説フォーム表示 -->
+<div ng-if="makeExplainCtrl.globalParam.flag.makeExplain">
+    <div ng-include="'view/explain/explainForm.html'" ng-controller="explainFormController as explainFormCtrl"></div>
+</div>
+
+<!-- プレビュー表示 -->
+<div ng-if="makeExplainCtrl.globalParam.flag.previewExplain">
+    <div tabindex="-1" class="modal fade" id="preview-dialog" aria-hidden="true">
+        <ng-include src="'view/explain/showExplain.html'" ng-controller="showExplainController as showExplainCtrl"></ng-include>
+    </div>
+</div>
+
+<!--投稿確認画面-->
+<div tabindex="-1" class="modal fade" id="submitComfirm-dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+            <!--アラート表示-->
+            <div class="common-inputAlert" ng-show="makeExplainCtrl.value.flag.alert">
+                <div class="alert alert-danger" style="width:98%;"role="alert" ng-repeat="alert in makeExplainCtrl.value.alert">
+                    {{alert}}
+                </div>
+            </div>
+
+            <div ng-show="!makeExplainCtrl.value.flag.alert">
+        		<div class="modal-header">
+        			<h2 class="pmd-card-title-text">投稿確認</h2>
+        		</div>
+        		<div class="modal-body">
+        			<p>投稿しますか</p>
+        		</div>
+        		<div class="pmd-modal-action pmd-modal-bordered text-right">
+        			<button data-dismiss="modal" ng-click="makeExplainCtrl.method.clickMake();" data-target="#submitComp-dialog" data-toggle="modal" class="btn pmd-btn-flat pmd-ripple-effect btn-primary" type="button">はい</button>
+        			<button data-dismiss="modal" type="button"class="btn pmd-btn-flat pmd-ripple-effect btn-default">いいえ</button>
+        		</div>
+            </div>
+		</div>
+	</div>
+</div>
+
+<!--解説投稿完了-->
+<div tabindex="-1" class="modal fade" id="submitComp-dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+        		<div class="modal-body" style="text-align:center">
+                    <!--投稿中-->
+                    <div class="loading" ng-if="makeExplainCtrl.value.flag.submiting">
+                      <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                      <span class="sr-only">投稿中...</span>
+                    </div>
+                    <div ng-if="!makeExplainCtrl.value.flag.submiting" style="padding:1em;">
+                        <p>投稿しました！</p>
+                        <button type="button" data-dismiss="modal"class="btn btn-primary"ng-click="makeExplainCtrl.method.goExplain();"><i class="fa fa-caret-right"></i> 解説を見る </button >
+                    </div>
+        		</div>
+            </div>
+		</div>
+	</div>
+</div>

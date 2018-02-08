@@ -1,0 +1,97 @@
+<div class="common-menu-header">
+    <p>全{{problemListCtrl.value.problems.length}}件</p>
+    <i title="印刷"class="material-icons md-dark pmd-sm" aria-hidden="true" ng-click="problemListCtrl.method.print();" style="float:right;margin-right:10px;cursor:pointer;">print</i>
+    <div id="right">
+        <div class="radio" style="margin:0px;margin-right:20px;">
+          <label><input type="radio" checked name="optradio" value="all" ng-checked="problemListCtrl.value.displayRange.all"ng-click="problemListCtrl.method.clickRange(all)">全体</label>
+          <label><input type="radio" name="optradio" value="my" ng-checked="problemListCtrl.value.displayRange.my" ng-click="problemListCtrl.method.clickRange(my)">自分</label>
+        </div>
+    </div>
+</div>
+
+<div class="common-menu-content" ng-if="!problemListCtrl.value.flag.empty && !problemListCtrl.globalParam.flag.problemListLoading">
+    <div class="pmd-card pmd-z-depth">
+        <div class="table-responsive">
+            <table cellspacing="0" cellpadding="0" class="table pmd-table table-hover" id="table-propeller">
+                <thead>
+                    <tr>
+                        <th width="30%">問題</th>
+                        <th width="10%">作成日 <label ng-click="problemListCtrl.method.clickOrder('作成日');">{{problemListCtrl.value.orderMark.insertTime}}</label></th>
+                        <th width="10%">難易度 <label ng-click="problemListCtrl.method.clickOrder('難易度');">{{problemListCtrl.value.orderMark.difficult}}</label></th>
+                        <th width="10%">理解度 <label ng-click="problemListCtrl.method.clickOrder('理解度');">{{problemListCtrl.value.orderMark.understand}}</label></th>
+                        <!-- <th width="20%">メニュー</th>
+                        <th width="30%">分野</th> -->
+                    </tr>
+                </thead>
+                <tbody style="font-size:.9rem;">
+                    <tr ng-repeat="problem in problemListCtrl.value.showProblem[problemListCtrl.value.currentPage-1]" ng-if="problemListCtrl.value.problems.length != 0;" data-toggle="modal" data-target="#problem-dialog"ng-click="problemListCtrl.method.clickProblem(problem);">
+                        <td data-title="問題" ng-bind-html="problem.sceProblem"></td>
+                        <td data-title="作成日" ng-bind="problem.insertTime | date: 'yyyy/MM/dd'"></td>
+                        <td style="text-align:center" data-title="難易度">
+                            <img ng-repeat="difficult in problem.showEvalute.difficult track by $index" ng-src='{{difficult}}' width="15%" style="margin:.2em;"/>
+                        </td>
+                        <td style="text-align:center" data-title="理解度">
+                            <img ng-repeat="understand in problem.showEvalute.understand track by $index"ng-src='{{understand}}' width="15%"/>
+                        </td>
+                        <!-- <td data-title="メニュー" ng-bind="problem.menu"></td>
+                        <td data-title="分野" ng-bind="problem.field"></td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<nav style="text-align:center;" ng-if="!problemListCtrl.value.flag.empty && !problemListCtrl.globalParam.flag.problemListLoading">
+	<ul class="pagination">
+		<li>
+			<a ng-click="problemListCtrl.method.clickBackPage();" aria-label="前のページへ">
+				<span aria-hidden="true">«</span>
+			</a>
+		</li>
+		<li ng-repeat="page in problemListCtrl.value.showProblemPage"><a ng-click="problemListCtrl.method.clickPage(page);" style="cursor:pointer;">{{page}}</a></li>
+		<li>
+			<a ng-click="problemListCtrl.method.clickNextPage();" aria-label="次のページへ">
+				<span aria-hidden="true">»</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+<div class="common-no-content"ng-if="problemListCtrl.value.flag.empty">
+    <p>問題がまだありません</p>
+    <a class="btn btn-primary" ng-click="problemListCtrl.method.goMakeProblem();">
+       <i class="fa fa-caret-right"></i> 問題を作成する
+    </a>
+</div>
+
+
+<style>
+.pmd-radio input{
+display: initial;
+margin: 0px;
+position: inherit;
+}
+.radio-inline{
+vertical-align: baseline;
+font-size: 13px;
+}
+.modal .radio {
+margin: 16px 10px;
+}
+
+.radio label{
+margin-left:10px;
+}
+
+.pagination a {
+    cursor: pointer;
+}
+
+#table-propeller tbody tr{
+    cursor: pointer;
+}
+
+#table-propeller thead tr th{
+    text-align: center;
+}

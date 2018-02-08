@@ -1,0 +1,86 @@
+{
+	"データ構造とアルゴリズム概説、計算量":{
+        "flag": true,
+        "items":[
+            {"name":"データ構造とアルゴリズム",
+             "flag":true
+             },
+             {"name":"計算量",
+              "flag":true
+             }
+     	]
+    },
+    "単純選択法、単純挿入法、バブルソート":{
+        "flag": true,
+        "items":[
+            {"name":"データベースとは",
+             "flag":true
+            }
+     	]
+    },
+    "バケットソート、基数ソート、クイックソート":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },
+    "スタック、キュー、グラフ探索":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"最短経路問題":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"二分探索木、二分木のバランス":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"線形連結リスト、循環・重連結リスト":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"線形探索、二分探索":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"ハッシュ法":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"文字列照合":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    },"ヒープソート、マージソート":{
+        "flag": true,
+        "items":[
+            {"name":"情報科学と周辺領域",
+             "flag":true
+            }
+     	]
+    }
+}

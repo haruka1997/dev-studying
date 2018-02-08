@@ -1,0 +1,17 @@
+.shuffle-fieldParent{
+    margin-left:55px;
+    float:left;
+    width: calc(25.0% - 5px);
+    font-size: 0.9em;
+}
+.shuffle-fieldChild{
+    margin-left: 30px;
+}
+.shuffle-footer-menu{
+    text-align: center;
+    margin:20px;
+}
+.shuffle-checkbox{
+    overflow:hidden;
+    flex-wrap: wrap;
+}

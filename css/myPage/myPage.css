@@ -1,0 +1,104 @@
+table.myPage-profileTable {
+    margin: 10px;
+    border-collapse: collapse;
+	line-height: 1.5;
+	border-top: 1px solid #ccc;
+	border-left: 3px solid #4790BB;
+    background: #fff;
+    width: 93%;
+}
+table.myPage-profileTable th {
+	font-weight: bold;
+    text-align: center;
+	color: #4790BB;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+table.myPage-profileTable td {
+    width: 150px;
+	padding: 10px;
+    text-align: left;
+	vertical-align: center;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.myPageBox {
+    position: absolute;
+    top: 50px;
+    width: calc(76% - 20px);
+    margin-left: 24%;
+
+}
+.myPageContent{
+    padding: 0.5em 1em;
+    background-color: #FFFFFF;
+    margin-right: 20px;
+    min-height: 70vh;
+}
+
+.myPageNav{
+    margin-top: 20px;
+}
+.navTitle{
+    background: #f7f7f7;
+    border-left: 7px solid #4790BB;
+    border-bottom: 2px solid #d7d7d7;
+}
+.navTitle h2{
+    padding: 5px 12px;
+    margin: 0;
+    color: #494949;
+    margin-left: 10px;
+}
+
+.myPageNav ul{
+    margin-top: 10px;
+}
+.myPageNav li{
+    font-size: 15px;
+}
+
+.myPage-detailProfile,
+.myPage-bookmarkCreate{
+    padding: 20px;
+}
+
+.myPage-detailProfile input,
+.myPage-detailProfile textarea{
+    width:95%;
+    margin:20px;
+    margin-bottom: 10px;
+}
+
+.myPage-detailProfile label{
+    margin-left: 20px;
+}
+
+.myPage-detailProfile img{
+    margin:20px;
+    margin-top:10px;
+    max-width: 50%;
+    max-height: 40%;
+}
+
+.myPage-profileImg{
+    width: 90%;
+    padding: .5em;
+}
+.chart{
+    padding: 1em;
+}
+.myPage-radioTitle{
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 14px;
+    color: rgba(0,0,0,.4);
+    margin-bottom: 0;
+}
+
+.pagination a {
+    cursor: pointer;
+}
+#table-propeller tbody tr{
+    cursor: pointer;
+}

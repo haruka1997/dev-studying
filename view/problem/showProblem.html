@@ -1,0 +1,83 @@
+<div class="modal-dialog modal-lg" style="width:80%;height:80%;">
+    <div class="modal-content">
+        <div class="modal-header pmd-modal-bordered">
+            <button aria-hidden="true" ng-click="showProblemCtrl.method.clickReturn();"data-dismiss="modal" data-target="#detail-dialog" data-toggle="modal" class="close" type="button" style="margin-right:5px;">×</button>
+            <div class="problem-modal-header-icon" ng-if="!makeProblemCtrl.globalParam.flag.previewProblem">
+                <i title="ブックマーク"class="material-icons md-dark pmd-sm" aria-hidden="true" data-target="#bookmarkList-dialog" data-toggle="modal" aria-hidden="true" ng-click="showProblemCtrl.method.clickBookmark();">bookmark</i>
+                <i title="編集"class="material-icons md-dark pmd-sm" data-dismiss="modal" data-target="#detail-dialog" data-toggle="modal" aria-hidden="true" ng-if="showProblemCtrl.value.flag.sameUser" ng-click="showProblemCtrl.method.clickDetail();">create</i>
+                <i title="削除"class="material-icons md-dark pmd-sm" data-dismiss="modal" data-target="#delete-dialog" data-toggle="modal" aria-hidden="true"style="width:24px;" ng-if="showProblemCtrl.value.flag.sameUser">delete forever</i>
+            </div>
+            <h2 class="pmd-card-title-text" ng-if="!makeProblemCtrl.globalParam.flag.previewProblem">問{{showProblemCtrl.value.problem.No}}/{{showProblemCtrl.value.problems.length}} <label class="problem-answer_rate">正解率: {{showProblemCtrl.value.answerRate}}%</label></h2>
+		</div>
+        <p class="common-problem"ng-bind-html="showProblemCtrl.value.problem.sceProblem"></p>
+
+        <!--選択式-->
+        <ol class="common-answer" ng-if="showProblemCtrl.value.problem.format == '選択肢'">
+          <li ng-click="showProblemCtrl.method.clickAnswer(1);">{{showProblemCtrl.value.problem.choiceNo[0]}}</li>
+          <li ng-click="showProblemCtrl.method.clickAnswer(2);">{{showProblemCtrl.value.problem.choiceNo[1]}}</li>
+          <li ng-click="showProblemCtrl.method.clickAnswer(3);">{{showProblemCtrl.value.problem.choiceNo[2]}}</li>
+          <li ng-click="showProblemCtrl.method.clickAnswer(4);">{{showProblemCtrl.value.problem.choiceNo[3]}}</li>
+        </ol>
+
+        <!--書き込み式-->
+        <div class="common-writeAnswer" ng-if="showProblemCtrl.value.problem.format == '書き取り'">
+            <textarea id="kanso" name="kanso" cols="100" rows="5" width=""placeholder="解答を入力"  ng-model="showProblemCtrl.value.inputAnswer"></textarea>
+            <button type="button" class="btn btn-primary" style="margin-top:20px;text-align:center;"ng-click="showProblemCtrl.method.clickSubmit();"><i class="fa fa-share" aria-hidden="true"></i> 解答 </button >
+        </div>
+
+        <!--論述式-->
+        <div class="common-writeAnswer" ng-if="showProblemCtrl.value.problem.format == '論述'">
+            <button type="button" class="btn btn-primary" style="margin-top:20px;text-align:center;"ng-click="showProblemCtrl.value.flag.showExplain =  true;"style="margin-top:10px;margin-bottom:50px"><i class="fa fa-share" aria-hidden="true"></i> 解答を表示</button >
+        </div>
+
+        <!--丸バツ-->
+        <p class="common-judge" ng-if="showProblemCtrl.value.flag.correct">
+            <img src="./img/maru.jpg" alt="" width="100"/>
+        </p>
+        <p class="common-judge" ng-if="showProblemCtrl.value.flag.inCorrect">
+            <img src="./img/batsu.jpg" alt="" width="100"/>
+        </p>
+
+        <!--書き取り式と論述式の解答表示-->
+        <div class="common-explain" ng-if="showProblemCtrl.value.flag.correct || showProblemCtrl.value.flag.inCorrect || showProblemCtrl.value.flag.showExplain">
+            <span class="box-title">解答</span>
+            <p>{{showProblemCtrl.value.problem.answer}}</p>
+        </div>
+
+        <div class="common-explain" ng-if="showProblemCtrl.value.flag.correct || showProblemCtrl.value.flag.inCorrect || showProblemCtrl.value.flag.showExplain">
+            <span class="box-title">解説</span>
+            <p ng-bind-html="showProblemCtrl.value.problem.sceExplain"></p>
+        </div>
+
+        <!--問題の評価と感想-->
+        <div class="common-explain" ng-if="(showProblemCtrl.value.flag.correct || showProblemCtrl.value.flag.inCorrect) && !showProblemCtrl.value.flag.sameUser && !showProblemCtrl.globalParam.flag.previewProblem">
+            <span class="box-title">評価</span>
+            <div class="evaluation-items">
+                <p>難易度</p>
+                <div class="radio" style="margin: 5px 15px;">
+                  <label><input type="radio" name="dif_level" value="1"  id="radio01" ng-model="showProblemCtrl.value.evalute.dif_level">難しい</label>
+                  <label><input type="radio" name="dif_level" value="0" id="radio02" ng-model="showProblemCtrl.value.evalute.dif_level">普通</label>
+                  <label><input type="radio" name="dif_level" value="-1" id="radio03" ng-model="showProblemCtrl.value.evalute.dif_level">簡単</label>
+                </div>
+            </div>
+            <div class="evaluation-items">
+                <p>理解度</p>
+                <div class="radio" style="margin: 5px 15px;">
+                  <label><input type="radio" name="und_level" value="1"  id="radio01" ng-model="showProblemCtrl.value.evalute.und_level">理解した</label>
+                  <label><input type="radio" name="und_level" value="0" id="radio02" ng-model="showProblemCtrl.value.evalute.und_level">普通</label>
+                  <label><input type="radio" name="und_level" value="-1" id="radio03" ng-model="showProblemCtrl.value.evalute.und_level">理解できなかった</label>
+                </div>
+            </div>
+            <div class="evaluation-items">
+                <p>質問や感想があればお書きください</p>
+                <textarea style="margin-left:25px;"id="kanso" name="kanso" cols="80" rows="2"placeholder="" ng-model="showProblemCtrl.value.comment"></textarea>
+            </div>
+        </div>
+
+        <div class="pmd-modal-action pmd-modal-bordered text-right" ng-if="!makeProblemCtrl.globalParam.flag.previewProblem">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="showProblemCtrl.method.clickReturn()"> リストに戻る </button >
+            <button type="button" class="btn btn-primary" ng-disabled="showProblemCtrl.value.problem.No==1"ng-click="showProblemCtrl.method.clickBackProblem(showProblemCtrl.value.problem.No)"><i class="fa fa-chevron-left" aria-hidden="true"></i> 前へ </button >
+            <button type="button" class="btn btn-primary" ng-disabled="showProblemCtrl.value.problems.length==showProblemCtrl.value.problem.No"style="margin-right:5px;" ng-click="showProblemCtrl.method.clickNextProblem(showProblemCtrl.value.problem.No)"><i class="fa fa-chevron-right" aria-hidden="true"></i> 次へ </button >
+		</div>
+    </div>
+</div>
